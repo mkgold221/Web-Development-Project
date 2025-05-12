@@ -67,7 +67,7 @@ header {
 /* Projects Section */
 .projects {
     background-color: var(--light);
-    /* border: 2px solid var(--secondary); */
+    
 }
 
 .projects-grid {
