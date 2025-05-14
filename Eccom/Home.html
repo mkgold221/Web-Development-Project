@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your Online Shopping Destination</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <button id="menu-toggle" class="menu-toggle">
+                        <span class="hamburger"></span>
+                    </button>
+                    <a href="index.html" class="logo">ShopEase</a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="home.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="index.html" class="nav-link">Products</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="wishlist-container">
+                        <button id="wishlist-btn" class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                            <span id="wishlist-count" class="count">0</span>
+                        </button>
+                    </div>
+                    <div class="cart-container">
+                        <button id="cart-btn" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Welcome to ShopEase</h1>
+                        <p>Your one-stop destination for all your shopping needs. Discover amazing products at unbeatable prices.</p>
+                        <div class="hero-buttons">
+                            <a href="index.html" class="btn btn-primary">Shop Now</a>
+                            <a href="about.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Shopping Experience">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="featured-categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-grid">
+                    <a href="index.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Smartphones</h3>
+                        <p>Latest models with amazing features</p>
+                    </a>
+                    <a href="index.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                        <h3>Laptops</h3>
+                        <p>Powerful machines for work and play</p>
+                    </a>
+                    <a href="index.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-tshirt"></i></div>
+                        <h3>Fashion</h3>
+                        <p>Trendy clothes for all seasons</p>
+                    </a>
+                    <a href="index.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-home"></i></div>
+                        <h3>Home Decor</h3>
+                        <p>Beautiful items for your home</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-slider" id="featured-products-slider">
+                    <!-- Products will be added here by JavaScript -->
+                    <div class="product-card skeleton">
+                        <div class="skeleton-loader img-loader"></div>
+                        <div class="skeleton-loader title-loader"></div>
+                        <div class="skeleton-loader price-loader"></div>
+                        <div class="skeleton-loader rating-loader"></div>
+                        <div class="skeleton-loader btn-loader"></div>
+                    </div>
+                    <div class="product-card skeleton">
+                        <div class="skeleton-loader img-loader"></div>
+                        <div class="skeleton-loader title-loader"></div>
+                        <div class="skeleton-loader price-loader"></div>
+                        <div class="skeleton-loader rating-loader"></div>
+                        <div class="skeleton-loader btn-loader"></div>
+                    </div>
+                    <div class="product-card skeleton">
+                        <div class="skeleton-loader img-loader"></div>
+                        <div class="skeleton-loader title-loader"></div>
+                        <div class="skeleton-loader price-loader"></div>
+                        <div class="skeleton-loader rating-loader"></div>
+                        <div class="skeleton-loader btn-loader"></div>
+                    </div>
+                    <div class="product-card skeleton">
+                        <div class="skeleton-loader img-loader"></div>
+                        <div class="skeleton-loader title-loader"></div>
+                        <div class="skeleton-loader price-loader"></div>
+                        <div class="skeleton-loader rating-loader"></div>
+                        <div class="skeleton-loader btn-loader"></div>
+                    </div>
+                </div>
+                <div class="view-all-container">
+                    <a href="index.html" class="btn btn-outline">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers -->
+        <section class="special-offers">
+            <div class="container">
+                <div class="offers-content">
+                    <div class="offer-text">
+                        <h2>Special Offers</h2>
+                        <p>Get up to 50% off on selected items. Limited time offer!</p>
+                        <a href="index.html" class="btn btn-primary">Shop Now</a>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2115&q=80" alt="Special Offers">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"ShopEase has the best selection of products I've ever seen. The quality is amazing and the prices are unbeatable!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Johnson">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <p>Loyal Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I've been shopping with ShopEase for over a year now and I'm always impressed with their service and product quality."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Brown">
+                            <div>
+                                <h4>Michael Brown</h4>
+                                <p>Regular Shopper</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"The customer service at ShopEase is exceptional. They went above and beyond to help me with my purchase."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily Davis">
+                            <div>
+                                <h4>Emily Davis</h4>
+                                <p>New Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Subscribe to Our Newsletter</h2>
+                        <p>Stay updated with our latest products and offers.</p>
+                    </div>
+                    <form id="home-newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="cart-header">
+                <h2>Your Shopping Cart</h2>
+                <button id="clear-cart" class="clear-cart-btn">Clear Cart</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be added here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <button id="start-shopping" class="start-shopping-btn">Start Shopping</button>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" disabled>Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlist-modal" class="modal">
+        <div class="modal-content wishlist-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="wishlist-header">
+                <h2>Your Wishlist</h2>
+                <button id="clear-wishlist" class="clear-wishlist-btn">Clear Wishlist</button>
+            </div>
+            <div id="wishlist-items" class="wishlist-items">
+                <!-- Wishlist items will be added here -->
+                <div class="empty-wishlist">
+                    <i class="fas fa-heart"></i>
+                    <p>Your wishlist is empty</p>
+                    <button id="start-wishlist-shopping" class="start-shopping-btn">Start Shopping</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About ShopEase</h3>
+                    <p>ShopEase is your one-stop destination for all your shopping needs. We offer a wide range of products at competitive prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="index.html">Product</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Shopping Street, NY, USA</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@shopease.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
