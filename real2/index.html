@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeHaven | Find Your Dream Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Home<span>Haven</span></h1>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="listings.html" class="nav-link">Properties</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-duration="1000">Find Your Dream Home</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Discover the perfect property that matches your lifestyle and preferences</p>
+            
+            <!-- Search Form -->
+            <div class="search-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <form class="search-form">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="City, State, Zip">
+                    </div>
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type">
+                            <option value="">Any Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="townhouse">Townhouse</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price-range">Price Range</label>
+                        <select id="price-range">
+                            <option value="">Any Price</option>
+                            <option value="100000-300000">$100k - $300k</option>
+                            <option value="300000-500000">$300k - $500k</option>
+                            <option value="500000-1000000">$500k - $1M</option>
+                            <option value="1000000+">$1M+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured-properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">Featured Properties</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Explore our handpicked selection of premium properties</p>
+            </div>
+            <div class="property-grid">
+                <!-- Property Card 1 -->
+                <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80" alt="Modern House">
+                        <span class="property-status">For Sale</span>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">$750,000</div>
+                        <h3 class="property-title">Modern Family Home</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> 123 Main St, Seattle, WA</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2,500 sqft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Villa">
+                        <span class="property-status">For Sale</span>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">$1,250,000</div>
+                        <h3 class="property-title">Luxury Waterfront Villa</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> 456 Ocean Dr, Miami, FL</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 3,800 sqft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Downtown Apartment">
+                        <span class="property-status">For Rent</span>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">$2,800/mo</div>
+                        <h3 class="property-title">Downtown Luxury Apartment</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> 789 Urban Ave, New York, NY</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1,200 sqft</span>
+                        </div>
+                        <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container" data-aos="fade-up">
+                <a href="listings.html" class="btn btn-outline">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">Why Choose Us</h2>
+                <p data-aos="fade-up" data-aos-delay="200">We provide exceptional service to help you find your dream home</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Wide Range of Properties</h3>
+                    <p>Explore thousands of properties that match your preferences and requirements.</p>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We ensure you get the best value for your investment with our price match guarantee.</p>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Expert Agents</h3>
+                    <p>Our professional agents have years of experience in the real estate market.</p>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>We're always available to address your concerns and answer your questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">What Our Clients Say</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Read testimonials from our satisfied customers</p>
+            </div>
+            <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <p>"HomeHaven helped me find my dream home in just two weeks! Their agents were professional, knowledgeable, and truly cared about my needs."</p>
+                        <div class="client-info">
+                            <div class="client-name">Sarah Johnson</div>
+                            <div class="client-location">Seattle, WA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"I was impressed by the wide range of properties they showed me. The process was smooth, and I got a great deal on my new apartment."</p>
+                        <div class="client-info">
+                            <div class="client-name">Michael Brown</div>
+                            <div class="client-location">Miami, FL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"As a first-time homebuyer, I was nervous about the process. HomeHaven guided me through every step and made it stress-free."</p>
+                        <div class="client-info">
+                            <div class="client-name">Emily Davis</div>
+                            <div class="client-location">New York, NY</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive the latest property listings and real estate news</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Home<span>Haven</span></h2>
+                    </div>
+                    <p>Your trusted partner in finding the perfect property that meets all your requirements and preferences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Property Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Houses</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">Condos</a></li>
+                        <li><a href="#">Townhouses</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Land</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Suite 100, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@homehaven.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HomeHaven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

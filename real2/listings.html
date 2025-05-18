@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings | HomeHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Home<span>Haven</span></h1>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="listings.html" class="nav-link active">Properties</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Property Listings</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Properties</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Section -->
+    <section class="listings-section">
+        <div class="container">
+            <div class="listings-container">
+                <!-- Filters Sidebar -->
+                <div class="filters-sidebar" data-aos="fade-right">
+                    <div class="filter-header">
+                        <h3>Filter Properties</h3>
+                        <button class="filter-toggle-btn" id="filter-toggle">
+                            <i class="fas fa-filter"></i> Filters
+                        </button>
+                    </div>
+                    <div class="filter-content">
+                        <form id="filter-form">
+                            <div class="filter-group">
+                                <label for="filter-location">Location</label>
+                                <input type="text" id="filter-location" placeholder="City, State, Zip">
+                            </div>
+                            <div class="filter-group">
+                                <label for="filter-type">Property Type</label>
+                                <select id="filter-type">
+                                    <option value="">Any Type</option>
+                                    <option value="house">House</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="condo">Condo</option>
+                                    <option value="townhouse">Townhouse</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="filter-status">Status</label>
+                                <select id="filter-status">
+                                    <option value="">Any Status</option>
+                                    <option value="for-sale">For Sale</option>
+                                    <option value="for-rent">For Rent</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="filter-price-min">Price Range</label>
+                                <div class="price-range">
+                                    <input type="number" id="filter-price-min" placeholder="Min">
+                                    <span>to</span>
+                                    <input type="number" id="filter-price-max" placeholder="Max">
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label for="filter-beds">Bedrooms</label>
+                                <select id="filter-beds">
+                                    <option value="">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="filter-baths">Bathrooms</label>
+                                <select id="filter-baths">
+                                    <option value="">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Features</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="garage">
+                                        <span>Garage</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="pool">
+                                        <span>Swimming Pool</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="garden">
+                                        <span>Garden</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="balcony">
+                                        <span>Balcony</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="air-conditioning">
+                                        <span>Air Conditioning</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-buttons">
+                                <button type="submit" class="btn btn-primary">Apply Filters</button>
+                                <button type="reset" class="btn btn-outline">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Listings Content -->
+                <div class="listings-content">
+                    <div class="listings-header">
+                        <div class="results-count">
+                            <p>Showing <span id="results-count">12</span> properties</p>
+                        </div>
+                        <div class="listings-sort">
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="newest">Newest</option>
+                                <option value="price-asc">Price (Low to High)</option>
+                                <option value="price-desc">Price (High to Low)</option>
+                                <option value="size-asc">Size (Small to Large)</option>
+                                <option value="size-desc">Size (Large to Small)</option>
+                            </select>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn grid-view active" title="Grid View">
+                                <i class="fas fa-th-large"></i>
+                            </button>
+                            <button class="view-btn list-view" title="List View">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="property-grid">
+                        <!-- Property Card 1 -->
+                        <div class="property-card" data-aos="fade-up">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80" alt="Modern House">
+                                <span class="property-status">For Sale</span>
+                            </div>
+                            <div class="property-details">
+                                <div class="property-price">$750,000</div>
+                                <h3 class="property-title">Modern Family Home</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 123 Main St, Seattle, WA</p>
+                                <div class="property-features">
+                                    <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 2,500 sqft</span>
+                                </div>
+                                <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 2 -->
+                        <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Villa">
+                                <span class="property-status">For Sale</span>
+                            </div>
+                            <div class="property-details">
+                                <div class="property-price">$1,250,000</div>
+                                <h3 class="property-title">Luxury Waterfront Villa</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 456 Ocean Dr, Miami, FL</p>
+                                <div class="property-features">
+                                    <span><i class="fas fa-bed"></i> 5 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 4 Baths</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 3,800 sqft</span>
+                                </div>
+                                <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 3 -->
+                        <div class="property-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Downtown Apartment">
+                                <span class="property-status">For Rent</span>
+                            </div>
+                            <div class="property-details">
+                                <div class="property-price">$2,800/mo</div>
+                                <h3 class="property-title">Downtown Luxury Apartment</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 789 Urban Ave, New York, NY</p>
+                                <div class="property-features">
+                                    <span><i class="fas fa-bed"></i> 2 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 1,200 sqft</span>
+                                </div>
+                                <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 4 -->
+                        <div class="property-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Suburban House">
+                                <span class="property-status">For Sale</span>
+                            </div>
+                            <div class="property-details">
+                                <div class="property-price">$550,000</div>
+                                <h3 class="property-title">Charming Suburban House</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 456 Maple St, Portland, OR</p>
+                                <div class="property-features">
+                                    <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 1,800 sqft</span>
+                                </div>
+                                <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 5 -->
+                        <div class="property-card" data-aos="fade-up">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Country Home">
+                                <span class="property-status">For Sale</span>
+                            </div>
+                            <div class="property-details">
+                                <div class="property-price">$850,000</div>
+                                <h3 class="property-title">Spacious Country Home</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 789 Rural Rd, Austin, TX</p>
+                                <div class="property-features">
+                                    <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 3,200 sqft</span>
+                                </div>
+                                <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 6 -->
+                        <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Modern Condo">
+                                <span class="property-status">For Rent</span>
+                            </div>
+                            <div class="property-details">
+                                <div class="property-price">$3,500/mo</div>
+                                <h3 class="property-title">Modern City Condo</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> 123 Downtown Blvd, Chicago, IL</p>
+                                <div class="property-features">
+                                    <span><i class="fas fa-bed"></i> 2 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                    <span><i class="fas fa-ruler-combined"></i> 1,500 sqft</span>
+                                </div>
+                                <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" data-aos="fade-up">
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link next">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Home<span>Haven</span></h2>
+                    </div>
+                    <p>Your trusted partner in finding the perfect property that meets all your requirements and preferences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Property Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Houses</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">Condos</a></li>
+                        <li><a href="#">Townhouses</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Land</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Suite 100, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@homehaven.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HomeHaven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Family Home | HomeHaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Home<span>Haven</span></h1>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="listings.html" class="nav-link active">Properties</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Property Gallery -->
+    <section class="property-gallery">
+        <div class="gallery-container">
+            <div class="main-image">
+                <img id="main-gallery-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80" alt="Modern Family Home">
+                <button class="gallery-nav prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-nav next"><i class="fas fa-chevron-right"></i></button>
+                <button class="fullscreen-btn"><i class="fas fa-expand"></i></button>
+            </div>
+            <div class="thumbnail-container">
+                <div class="thumbnail active">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80" alt="Front View">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Living Room">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80" alt="Kitchen">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1053&q=80" alt="Bedroom">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Bathroom">
+                </div>
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Backyard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="property-details-section">
+        <div class="container">
+            <div class="property-details-container">
+                <!-- Main Content -->
+                <div class="property-main-content">
+                    <div class="property-header">
+                        <div class="property-title-area">
+                            <span class="property-status">For Sale</span>
+                            <h1 class="property-title">Modern Family Home</h1>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> 123 Main St, Seattle, WA</p>
+                        </div>
+                        <div class="property-price-area">
+                            <div class="property-price">$750,000</div>
+                            <div class="property-meta">
+                                <span><i class="fas fa-calendar"></i> Listed 2 weeks ago</span>
+                                <span><i class="fas fa-eye"></i> 1,240 views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-features-overview">
+                        <div class="feature-item">
+                            <i class="fas fa-bed"></i>
+                            <div class="feature-text">
+                                <span class="feature-value">4</span>
+                                <span class="feature-label">Bedrooms</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bath"></i>
+                            <div class="feature-text">
+                                <span class="feature-value">3</span>
+                                <span class="feature-label">Bathrooms</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <div class="feature-text">
+                                <span class="feature-value">2,500</span>
+                                <span class="feature-label">Square Feet</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-car"></i>
+                            <div class="feature-text">
+                                <span class="feature-value">2</span>
+                                <span class="feature-label">Garage Spaces</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="feature-text">
+                                <span class="feature-value">2020</span>
+                                <span class="feature-label">Year Built</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-description">
+                        <h2>Description</h2>
+                        <p>Welcome to this stunning modern family home in the heart of Seattle. This beautifully designed residence offers the perfect blend of comfort, style, and functionality, making it an ideal choice for families looking for their dream home.</p>
+                        <p>The open-concept main floor features a spacious living room with large windows that flood the space with natural light. The gourmet kitchen is equipped with high-end stainless steel appliances, quartz countertops, and a large island, perfect for entertaining guests or family meals.</p>
+                        <p>Upstairs, you'll find four generously sized bedrooms, including a luxurious primary suite with a walk-in closet and an ensuite bathroom featuring a double vanity and a walk-in shower. The additional three bedrooms share a well-appointed full bathroom.</p>
+                        <p>The backyard offers a private oasis with a covered patio, perfect for outdoor dining and relaxation. The property also includes a two-car garage and is situated in a highly sought-after neighborhood with excellent schools, parks, and amenities nearby.</p>
+                        <div class="read-more-container">
+                            <button id="read-more-btn" class="btn btn-text">Read More <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="property-details-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="features">Features & Amenities</button>
+                            <button class="tab-btn" data-tab="details">Additional Details</button>
+                            <button class="tab-btn" data-tab="location">Location</button>
+                        </div>
+                        <div class="tabs-content">
+                            <div class="tab-pane active" id="features-tab">
+                                <div class="amenities-list">
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Central Air Conditioning</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Hardwood Floors</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Stainless Steel Appliances</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Walk-in Closets</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Fireplace</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>High Ceilings</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Energy Efficient Windows</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Smart Home Features</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Covered Patio</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Landscaped Garden</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Security System</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Quartz Countertops</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="details-tab">
+                                <div class="details-list">
+                                    <div class="details-item">
+                                        <span class="details-label">Property Type:</span>
+                                        <span class="details-value">Single Family Home</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Year Built:</span>
+                                        <span class="details-value">2020</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Lot Size:</span>
+                                        <span class="details-value">0.25 acres</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Heating:</span>
+                                        <span class="details-value">Forced Air</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Cooling:</span>
+                                        <span class="details-value">Central Air</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Parking:</span>
+                                        <span class="details-value">2-Car Garage</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Basement:</span>
+                                        <span class="details-value">Finished</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Roof:</span>
+                                        <span class="details-value">Asphalt Shingle</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Water:</span>
+                                        <span class="details-value">Public</span>
+                                    </div>
+                                    <div class="details-item">
+                                        <span class="details-label">Sewer:</span>
+                                        <span class="details-value">Public</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="location-tab">
+                                <div class="location-map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161668699!2d-122.48214752341368!3d47.61317464021946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1625764215676!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                                <div class="location-details">
+                                    <h3>Neighborhood Information</h3>
+                                    <div class="neighborhood-features">
+                                        <div class="neighborhood-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div class="neighborhood-text">
+                                                <h4>Education</h4>
+                                                <p>Excellent schools nearby including Seattle Elementary (0.5 miles) and Washington High School (1.2 miles)</p>
+                                            </div>
+                                        </div>
+                                        <div class="neighborhood-item">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <div class="neighborhood-text">
+                                                <h4>Shopping</h4>
+                                                <p>Multiple shopping centers within 10 minutes, including Seattle Mall and Downtown Shopping District</p>
+                                            </div>
+                                        </div>
+                                        <div class="neighborhood-item">
+                                            <i class="fas fa-utensils"></i>
+                                            <div class="neighborhood-text">
+                                                <h4>Dining</h4>
+                                                <p>Variety of restaurants and cafes within walking distance</p>
+                                            </div>
+                                        </div>
+                                        <div class="neighborhood-item">
+                                            <i class="fas fa-bus"></i>
+                                            <div class="neighborhood-text">
+                                                <h4>Transportation</h4>
+                                                <p>Public transit stops within 0.3 miles, easy access to major highways</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-video">
+                        <h2>Property Video Tour</h2>
+                        <div class="video-container">
+                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Property Video Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="property-sidebar">
+                    <div class="agent-card">
+                        <div class="agent-header">
+                            <div class="agent-image">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Agent Photo">
+                            </div>
+                            <div class="agent-info">
+                                <h3>Sarah Johnson</h3>
+                                <p>Senior Real Estate Agent</p>
+                                <div class="agent-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(42 reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agent-contact">
+                            <a href="tel:+1234567890" class="btn btn-outline btn-block"><i class="fas fa-phone"></i> (123) 456-7890</a>
+                            <a href="mailto:sarah@homehaven.com" class="btn btn-outline btn-block"><i class="fas fa-envelope"></i> Email Agent</a>
+                        </div>
+                    </div>
+
+                    <div class="inquiry-form-container">
+                        <h3>Interested in this property?</h3>
+                        <form id="property-inquiry-form" class="inquiry-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="I'm interested in this property and would like to schedule a viewing." required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="financing" value="pre-approved">
+                                    <span>I'm pre-approved for financing</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="mortgage-calculator">
+                        <h3>Mortgage Calculator</h3>
+                        <form id="mortgage-calculator-form">
+                            <div class="form-group">
+                                <label for="home-price">Home Price</label>
+                                <input type="number" id="home-price" value="750000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="down-payment">Down Payment (%)</label>
+                                <input type="number" id="down-payment" value="20" min="0" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loan-term">Loan Term (years)</label>
+                                <select id="loan-term" required>
+                                    <option value="15">15 years</option>
+                                    <option value="20">20 years</option>
+                                    <option value="30" selected>30 years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="interest-rate">Interest Rate (%)</label>
+                                <input type="number" id="interest-rate" value="4.5" step="0.1" min="0" max="20" required>
+                            </div>
+                            <button type="button" id="calculate-mortgage" class="btn btn-secondary btn-block">Calculate</button>
+                        </form>
+                        <div class="mortgage-results" id="mortgage-results" style="display: none;">
+                            <div class="result-item">
+                                <span class="result-label">Monthly Payment:</span>
+                                <span class="result-value" id="monthly-payment">$3,800</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Total Loan Amount:</span>
+                                <span class="result-value" id="loan-amount">$600,000</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Total Interest Paid:</span>
+                                <span class="result-value" id="total-interest">$768,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="share-property">
+                        <h3>Share This Property</h3>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-btn pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="share-btn email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Properties -->
+            <div class="similar-properties">
+                <h2>Similar Properties</h2>
+                <div class="property-grid">
+                    <!-- Property Card 1 -->
+                    <div class="property-card" data-aos="fade-up">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Villa">
+                            <span class="property-status">For Sale</span>
+                        </div>
+                        <div class="property-details">
+                            <div class="property-price">$1,250,000</div>
+                            <h3 class="property-title">Luxury Waterfront Villa</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> 456 Ocean Dr, Miami, FL</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-bed"></i> 5 Beds</span>
+                                <span><i class="fas fa-bath"></i> 4 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 3,800 sqft</span>
+                            </div>
+                            <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 2 -->
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Suburban House">
+                            <span class="property-status">For Sale</span>
+                        </div>
+                        <div class="property-details">
+                            <div class="property-price">$550,000</div>
+                            <h3 class="property-title">Charming Suburban House</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> 456 Maple St, Portland, OR</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 1,800 sqft</span>
+                            </div>
+                            <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 3 -->
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Country Home">
+                            <span class="property-status">For Sale</span>
+                        </div>
+                        <div class="property-details">
+                            <div class="property-price">$850,000</div>
+                            <h3 class="property-title">Spacious Country Home</h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> 789 Rural Rd, Austin, TX</p>
+                            <div class="property-features">
+                                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 3,200 sqft</span>
+                            </div>
+                            <a href="property-details.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Home<span>Haven</span></h2>
+                    </div>
+                    <p>Your trusted partner in finding the perfect property that meets all your requirements and preferences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Property Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Houses</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">Condos</a></li>
+                        <li><a href="#">Townhouses</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Land</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Suite 100, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@homehaven.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 HomeHaven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Lightbox Gallery -->
+    <div class="lightbox" id="gallery-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close"><i class="fas fa-times"></i></button>
+            <div class="lightbox-image-container">
+                <img id="lightbox-image" src="/placeholder.svg" alt="Property Image">
+                <button class="lightbox-nav prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-nav next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Inquiry Modal -->
+    <div class="modal" id="inquiry-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Schedule a Viewing</h2>
+            </div>
+            <div class="modal-body">
+                <form id="schedule-viewing-form">
+                    <div class="form-group">
+                        <label for="viewing-name">Full Name</label>
+                        <input type="text" id="viewing-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="viewing-email">Email</label>
+                        <input type="email" id="viewing-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="viewing-phone">Phone</label>
+                        <input type="tel" id="viewing-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="viewing-date">Preferred Date</label>
+                        <input type="date" id="viewing-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="viewing-time">Preferred Time</label>
+                        <select id="viewing-time" required>
+                            <option value="">Select a time</option>
+                            <option value="morning">Morning (9AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (12PM - 4PM)</option>
+                            <option value="evening">Evening (4PM - 7PM)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="viewing-message">Additional Information</label>
+                        <textarea id="viewing-message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Schedule Viewing</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
