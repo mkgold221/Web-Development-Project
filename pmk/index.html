@@ -7,10 +7,11 @@
     <meta name="description" content="Professional portfolio of Idowu Malik, Web Developer and Python Programmer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
 </head>
 <body>
     <!-- Header -->
-    <header>
+      <header>
         <a href="#" class="logo">CodeWithMalik</a>  
         <nav>
             <ul class="nav-links">
@@ -19,13 +20,19 @@
                 <li><a href="#service">Service</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#certification">Certification</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
-                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
+  
+
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -33,7 +40,14 @@
             <h1 class="delay-1">Hi, I'm Idowu Malik</h1>
             <h2 class="delay-2">Turning Ideas into Reality with Code</h2>
             <p class="delay-2">I'm a <span class="typing-text" id="typing"></span> specializing in building exceptional digital experiences. Currently focused on creating responsive web applications and solving complex problems with Python.</p>
-            <a href="Idowu-Malik-FlowCV-Resume-20250512 (16).pdf" class="btn delay-3">View Resume</a>
+            <!-- Font Awesome CDN (place this in your <head>) -->
+            <div class="button-wrapper">
+                 <a href="Idowu-Malik-FlowCV-Resume-20250616 (1).pdf" class="btn delay-3 btns" download>
+                   <i class="fas fa-download" style="margin-right: 8px;"></i> View Resume
+                 </a>
+                 <a href="#contact" class="btn delay-3 hire-btn">Hire Me</a>
+            </div>
+
         </div>
         <div id="particles-js"></div>
     </section>
@@ -47,6 +61,10 @@
                 <p>My journey in tech started with a degree in Computer Science and has since taken me through various roles where I've had the privilege of working with amazing teams on diverse projects.</p>
                 <p>Here are a few technologies I've been working with recently:</p>
                 <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>Css</li>
+                    <li>Bootstrap Css</li>
+                    <li>Tailwind Css</li>
                     <li>JavaScript (ES6+)</li>
                     <li>Python</li>
                     <li>React</li>
@@ -109,27 +127,29 @@
                 <p>Here are some of my recent projects</p>
                 <p>Click on it to View full Details</p>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="ecom.jpg" alt="Project 1">
-                            <div class="overlay">
-                                <h3>E-commerce Website</h3>
-                                <p> React </p>
-                                <button href="" class="view-btn" data-project="1">
-                                   <a href="https://680e1ffb613946e600f332f1--joyful-elf-c0a302.netlify.app/">View full project</a>
-                                    </button>
+                            <div class="project-card">
+                                 <div class="project-img">
+                                   <img src="ecom.jpg" alt="Project 1" />
+                                   <div class="overlay">
+                                     <h3>E-commerce Website</h3>
+                                     <p>React</p>
+                                     <div class="button-group">
+                                       <a href="https://680e1ffb613946e600f332f1--joyful-elf-c0a302.netlify.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/tree/262804b6008e2824e4a1596f60636967249d9daa/My%20eccomerce%20website" target="_blank" class="github-btn">💻 GitHub</a>
+                                     </div>
+                                   </div>
+                                 </div>
                             </div>
-                        </div>
-                    </div>
                       <div class="project-card">
                         <div class="project-img">
                             <img src="movie.jpg" alt="Project 4">
                             <div class="overlay">
                                 <h3>Movie Website</h3>
                                 <p>Html, Css, JavaScript</p>
-                                <button class="view-btn" data-project="4">
-                                     <a href="https://681fb11d941c4cd07def4f89--jolly-youtiao-2c9e92.netlify.app/">View full project</a>
-                                </button>
+                                 <div class="button-group">
+                                       <a href="https://681fb11d941c4cd07def4f89--jolly-youtiao-2c9e92.netlify.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/tree/5eb7e8877d4b594a191bebe5d63cf12ccfa37a6c/moviecode" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,9 +159,10 @@
                             <div class="overlay">
                                 <h3>Blog Platform</h3>
                                 <p> Html, Css, JavaScript </p>
-                                <button class="view-btn" data-project="4">
-                                     <a href="https://magnificent-macaron-d6dc3c.netlify.app/">View full project</a>
-                                </button>
+                                 <div class="button-group">
+                                       <a href="https://magnificent-macaron-d6dc3c.netlify.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/tree/5eb7e8877d4b594a191bebe5d63cf12ccfa37a6c/blogger" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,9 +172,10 @@
                             <div class="overlay">
                                 <h3>Restuarant Booking Website</h3>
                                 <p>Html, Css, JavaScript</p>
-                                <button class="view-btn" data-project="4">
-                                     <a href="https://681f6504ff7cb368737841b5--peaceful-narwhal-410293.netlify.app/">View full project</a>
-                                </button>
+                                <div class="button-group">
+                                       <a href="https://681f6504ff7cb368737841b5--peaceful-narwhal-410293.netlify.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/tree/262804b6008e2824e4a1596f60636967249d9daa/Booking" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,13 +185,13 @@
                             <div class="overlay">
                                 <h3>Clothing Website</h3>
                                 <p>Html, Css, JavaScript</p>
-                                <button class="view-btn" data-project="4">
-                                     <a href="https://6818929533087044c2c4e529--lucent-centaur-02acbe.netlify.app/">View full project</a>
-                                </button>
+                                 <div class="button-group">
+                                       <a href="https://68373868b670ae67b2669561--effulgent-paprenjak-657960.netlify.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/tree/9619c2887b60a0d23648b7b90eb0457c867963c6/idnt" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  
                   
                     <div class="project-card">
                         <div class="project-img">
@@ -177,39 +199,38 @@
                             <div class="overlay">
                                 <h3>Watch Company Sales Dashboard</h3>
                                 <p> Python, streamlit </p>
-                                <button class="view-btn" data-project="3">
-                                    <a href="https://my-data-9lrqtne4cv9h9mrgbhkckd.streamlit.app/">
-                                        View full Dashboard
-                                    </a>
-                                    </button>
+                                 <div class="button-group">
+                                       <a href="https://my-data-9lrqtne4cv9h9mrgbhkckd.streamlit.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/blob/5eb7e8877d4b594a191bebe5d63cf12ccfa37a6c/datadash/index.py" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="project-card">
                         <div class="project-img">
                            <a href="datr.jpg"><img src="datr.jpg" alt="Project 3"></a> 
                             <div class="overlay">
                                 <h3>Python Gapminder Dashboard</h3>
                                 <p>Python, Excel, streamlit</p>
-                                <button class="view-btn" data-project="3">
-                                    <a href="https://my-data-j9peauh7rcvkry8epod7av.streamlit.app/">
-                                        View full Dashboard
-                                    </a>
-                                </button>
+                                <div class="button-group">
+                                       <a href="https://my-data-j9peauh7rcvkry8epod7av.streamlit.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/blob/5eb7e8877d4b594a191bebe5d63cf12ccfa37a6c/dataset1/streamlit_gapminder_dashboard.py" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="project-card">
                         <div class="project-img">
                            <a href="dash.png"><img src="dash.png" alt="Project 3"></a> 
                             <div class="overlay">
                                 <h3>Global Development Dashboard</h3>
                                 <p>Python,streamlit</p>
-                                <button class="view-btn" data-project="3">
-                                    <a href="https://my-data-cejeqoxpxmzzxyn2mnezyc.streamlit.app/">
-                                        View full Dashboard
-                                    </a>
-                                </button>
+                                 <div class="button-group">
+                                       <a href="https://my-data-cejeqoxpxmzzxyn2mnezyc.streamlit.app/" target="_blank" class="view-btn">🌐 View Project</a>
+                                       <a href="https://github.com/mkgold221/my-data/blob/5eb7e8877d4b594a191bebe5d63cf12ccfa37a6c/dataset1/dashboard.py" target="_blank" class="github-btn">💻 GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -244,13 +265,17 @@
                         <i class="fab fa-react skill-icon"></i>
                         <span class="skill-name">React</span>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-sass skill-icon"></i>
-                        <span class="skill-name">Sass</span>
-                    </div>
+
                     <div class="skill-item">
                         <i class="fab fa-bootstrap skill-icon"></i>
                         <span class="skill-name">Bootstrap</span>
+                    </div>
+
+                      <div class="skill-item">
+                        <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+                               <path d="M12.004 3.876c-2.613 0-4.458 1.324-5.532 3.972 1.09-1.324 2.258-1.856 3.504-1.596 0.759 0.153 1.31 0.711 1.951 1.367 1.004 1.012 2.153 2.166 4.42 2.166 2.612 0 4.458-1.324 5.532-3.972-1.09 1.324-2.258 1.856-3.504 1.596-0.759-0.153-1.31-0.711-1.951-1.367-1.004-1.012-2.153-2.166-4.42-2.166zm-6.996 6c-2.613 0-4.458 1.324-5.532 3.972 1.09-1.324 2.258-1.856 3.504-1.596 0.759 0.153 1.31 0.711 1.951 1.367 1.004 1.012 2.153 2.166 4.42 2.166 2.612 0 4.458-1.324 5.532-3.972-1.09 1.324-2.258 1.856-3.504 1.596-0.759-0.153-1.31-0.711-1.951-1.367-1.004-1.012-2.153-2.166-4.42-2.166z"/>
+                        </svg>
+                        <span class="skill-name">Tailwind</span>
                     </div>
                 </div>
             </div>
@@ -260,7 +285,7 @@
                 <h3>Data Analyst</h3>
                 <div class="skill-items">
                     <div class="skill-item skill-icon">
-                        <i class="fas fa-file-excel"></i> <!-- Official Excel icon -->
+                        <i class="fas fa-file-excel skill-icon"></i> <!-- Official Excel icon -->
                         <span class="skill-name">Excel</span>
                       </div>
                       
@@ -311,6 +336,111 @@
             </div>
         </div>
     </section>
+    <!-- Testimonial Section -->
+           <section class="client-reviews" id="testimonial">
+        <div class="wrapper">
+            <h2 class="heading-main">What Clients Say</h2>
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-body">
+                        <div class="quote-mark">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="review-message">Working with this developer was an absolute pleasure. Their attention to detail and creative problem-solving skills transformed our project into something beyond our expectations.</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Sarah Johnson</h4>
+                            <p class="client-position">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-body">
+                        <div class="quote-mark">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="review-message">I was impressed by the level of professionalism and technical expertise. Our website not only looks stunning but performs exceptionally well across all devices.</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Michael Chen</h4>
+                            <p class="client-position">Marketing Director, Innovate Solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="review-body">
+                        <div class="quote-mark">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="review-message">The ability to understand our vision and translate it into a functional, beautiful website was remarkable. Communication was clear throughout the entire process.</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily Rodriguez">
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Emily Rodriguez</h4>
+                            <p class="client-position">Founder, Design Collective</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-item">
+                    <div class="review-body">
+                        <div class="quote-mark">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="review-message">Exceptional work delivered on time and within budget. The responsive design works flawlessly on all our devices, and the custom features have greatly improved our user engagement.</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="David Wilson">
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">David Wilson</h4>
+                            <p class="client-position">CTO, Future Systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certification" class="certificate-section">
+        <div class="heading-main"> My Certificate </div>
+  <div class="certificate-grid">
+    <div class="certificate-card landscape" onclick="openModal(this)">
+      <img src="web design cer.png" alt="Programming with Python Certificate" />
+       <p>Responsive Web Design</p>
+     
+    </div>
+    <div class="certificate-card portrait" onclick="openModal(this)">
+      <img src="IMG20250524131853.jpg" alt="Responsive Web Design Certificate" />
+        <p>Programming with Python</p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Certificate Preview" />
+  </div>
+</section>
+
+    
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -337,6 +467,7 @@
                     <a href="https://www.instagram.com/codewithmalik3?igsh=MWdkOHdyNGIwdWV6YQ==" class="social-link"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/malik-idowu-228565363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://x.com/GoldMk67?t=URhtIs6gftFZMlsYAO83zQ&s=09" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/mkgold221" target="_blank" class="social-link"> <i class="fab fa-github"></i></a>
                     <a href="https://www.tiktok.com/@code_with_malik?_t=ZM-8w8HIzSvAAP&_r=1" class="social-link"><i class="fab fa-fab fa-tiktok"></i></a>
                 </div>
             </div>
@@ -387,7 +518,9 @@
                     <a href="https://www.linkedin.com/in/malik-idowu-228565363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://x.com/GoldMk67?t=URhtIs6gftFZMlsYAO83zQ&s=09" class="social-link"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.tiktok.com/@code_with_malik?_t=ZM-8w8HIzSvAAP&_r=1" class="social-link"><i class="fab fa-fab fa-tiktok"></i></a>
-            </div>
+                    <a href="https://github.com/mkgold221" target="_blank" class="social-link"> <i class="fab fa-github"></i></a>
+
+                </div>
           </div>
       
           <!-- Links -->

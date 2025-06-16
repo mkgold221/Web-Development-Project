@@ -1,18 +1,33 @@
-  // Mobile Menu Toggle
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+ const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
 
-  hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-  });
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        });
 
-  // Close mobile menu when clicking a link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-      });
-  });
+        // Close menu when clicking on nav links
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
   // Typing Effect
   const typingText = document.getElementById('typing');
   const words = ['Web Developer', 'Python Programmer', 'Problem Solver', 'Tech Enthusiast', 'Data Analyst'];
@@ -213,3 +228,17 @@
       form.reset(); // Reset the form fields
     }, 500); // Delay for demonstration purposes, remove this in production
   });
+
+  
+  function openModal(card) {
+  const modal = document.getElementById("modal");
+  const img = card.querySelector("img").src;
+  const modalImg = document.getElementById("modal-img");
+  modalImg.src = img;
+  modal.classList.add("show");
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.remove("show");
+}
+
