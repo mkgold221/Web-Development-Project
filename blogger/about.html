@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Modern Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Modern<span>Blog</span></a>
+            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog-post.html">Blog</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </nav>
+            
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog-post.html">Blog</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <button id="mobile-theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About Modern Blog</h1>
+                <p>Our mission is to provide high-quality, insightful content for developers and designers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Modern Blog was founded in 2020 by a group of passionate developers who wanted to create a platform for sharing knowledge about modern web technologies. What started as a small blog has grown into a trusted resource for thousands of readers worldwide.</p>
+                    <p>We believe in the power of community-driven learning and strive to create content that is both technically accurate and accessible to developers at all levels.</p>
+                    
+                    <h2>Our Values</h2>
+                    <div class="values-list">
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Innovation</h3>
+                            <p>We stay at the forefront of technology trends to bring you the latest insights.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>Community</h3>
+                            <p>We foster a supportive environment where developers can learn and grow together.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                            <p>We're committed to making complex topics understandable and practical.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="team.jpg" alt="Our team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="mg1.jpg" alt="John Doe">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>John Doe</h3>
+                        <span class="role">Founder & Lead Developer</span>
+                        <p>John specializes in JavaScript frameworks and performance optimization with over 10 years of experience.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="mg7.jpg" alt="Sarah Smith">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Smith</h3>
+                        <span class="role">UI/UX Designer</span>
+                        <p>Sarah creates beautiful, user-friendly interfaces with a focus on accessibility and design systems.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="mg4.jpg" alt="Michael Johnson">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Johnson</h3>
+                        <span class="role">Backend Developer</span>
+                        <p>Michael architects scalable backend systems and specializes in database optimization.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="mg5.jpg" alt="Emily Chen">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Emily Chen</h3>
+                        <span class="role">Content Editor</span>
+                        <p>Emily ensures our content is clear, accurate, and valuable to our readers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Community</h2>
+                <p>Subscribe to our newsletter to get the latest articles, tutorials, and resources delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Modern<span>Blog</span></a>
+                    <p>A modern, responsive blog with clean design and dark mode support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog-post.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Productivity</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@modernblog.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Modern Blog. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

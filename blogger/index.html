@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Modern<span>Blog</span></a>
+            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="blog-post.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </nav>
+            
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog-post.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <button id="mobile-theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Modern Blog</h1>
+                <p>A clean, responsive blog with modern design elements and dark mode support</p>
+                <div class="hero-actions">
+                    <a href="#featured" class="btn btn-primary">Read Articles</a>
+                    <a href="#" class="btn btn-secondary">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section id="featured" class="featured-post">
+        <div class="container">
+            <h2 class="section-title">Featured Post</h2>
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="./webdevelopment.jpg" alt="Featured post">
+                    <span class="badge">Featured</span>
+                </div>
+                <div class="featured-content">
+                    <div class="post-meta">
+                        <span class="category">Technology</span>
+                        <span class="date">June 15, 2023</span>
+                    </div>
+                    <h3><a href="blog-post.html">The Future of Web Development in 2023</a></h3>
+                    <p>Explore the latest trends and technologies shaping the future of web development this year and beyond. From AI integration to advanced CSS techniques...</p>
+                    <div class="author">
+                        <img src="./mg2.jpg" alt="Author">
+                        <span>By John Doe</span>
+                    </div>
+                    <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="./uiux.jpg" alt="Blog post">
+                        <span class="badge">Design</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="date">June 10, 2023</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <h3><a href="blog-post.html">10 UI/UX Design Principles You Should Know</a></h3>
+                        <p>Discover essential UI/UX design principles that will help you create more intuitive and user-friendly interfaces...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="./javascript.jpg" alt="Blog post">
+                        <span class="badge">JavaScript</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="date">June 5, 2023</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <h3><a href="blog-post.html">Mastering Modern JavaScript Patterns</a></h3>
+                        <p>Learn about the most useful JavaScript patterns that can help you write cleaner, more maintainable code...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="./Css.jpg" alt="Blog post">
+                        <span class="badge">CSS</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="date">May 28, 2023</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <h3><a href="blog-post.html">Advanced CSS Grid Techniques</a></h3>
+                        <p>Take your CSS Grid skills to the next level with these advanced techniques and creative layout solutions...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 4 -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="dev.jpg" alt="Blog post">
+                        <span class="badge">Productivity</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="post-meta">
+                            <span class="date">May 20, 2023</span>
+                            <span class="read-time">4 min read</span>
+                        </div>
+                        <h3><a href="blog-post.html">Developer Productivity Hacks</a></h3>
+                        <p>Boost your coding productivity with these simple but effective hacks that can save you hours each week...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="view-all">
+                <a href="blog-post.html" class="btn btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Get the latest articles and news delivered to your inbox every week.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Modern<span>Blog</span></a>
+                    <p>A modern, responsive blog with clean design and dark mode support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog-post.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Productivity</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@modernblog.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Modern Blog. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

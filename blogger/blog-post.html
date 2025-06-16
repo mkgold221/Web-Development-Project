@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Web Development in 2023 | Modern Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Modern<span>Blog</span></a>
+            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog-post.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </nav>
+            
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog-post.html" class="active">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <button id="mobile-theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Blog Post Content -->
+    <main class="blog-post">
+        <div class="container">
+            <article>
+                <!-- Post Header -->
+                <header class="post-header">
+                    <div class="post-meta">
+                        <span class="category">Technology</span>
+                        <span class="date">June 15, 2023</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                    <h1 class="post-title">The Future of Web Development in 2023</h1>
+                    <div class="author">
+                        <img src="mg2.jpg" alt="John Doe">
+                        <div>
+                            <span class="name">John Doe</span>
+                            <span class="role">Senior Developer</span>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Featured Image -->
+                <div class="featured-image">
+                    <img src="webdevelopment.jpg" alt="The Future of Web Development">
+                </div>
+                
+                <!-- Post Content -->
+                <div class="post-content">
+                    <p class="intro">The web development landscape is constantly evolving, and 2023 brings exciting new trends and technologies that are shaping the future of how we build for the web. From AI-powered tools to advanced CSS features, developers have more power than ever to create amazing digital experiences.</p>
+                    
+                    <h2>1. AI Integration in Development</h2>
+                    <p>Artificial Intelligence is no longer just a buzzword in web development. Tools like GitHub Copilot are revolutionizing how developers write code, offering intelligent suggestions and even generating entire code blocks. In 2023, we're seeing more AI-powered tools that can:</p>
+                    <ul>
+                        <li>Automatically generate UI components based on design specifications</li>
+                        <li>Optimize website performance by analyzing user behavior patterns</li>
+                        <li>Create personalized content for different user segments</li>
+                        <li>Automate testing and bug detection</li>
+                    </ul>
+                    
+                    <h2>2. Advanced CSS Techniques</h2>
+                    <p>CSS continues to evolve with powerful new features that give developers more creative control:</p>
+                    
+                    <div class="code-block">
+                        <pre><code class="language-css">/* Example of modern CSS features */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    aspect-ratio: 1 / 1;
+    view-transition-name: card-transition;
+    @supports (container-type: inline-size) {
+        container-type: inline-size;
+    }
+}</code></pre>
+                    </div>
+                    
+                    <p>Key CSS developments include:</p>
+                    <ul>
+                        <li><strong>Container Queries:</strong> Finally stable in all major browsers, allowing elements to respond to their container's size rather than just the viewport.</li>
+                        <li><strong>CSS Nesting:</strong> Now supported in Chrome and Safari, reducing the need for preprocessors.</li>
+                        <li><strong>View Transitions API:</strong> Enables smooth animations between state changes with minimal JavaScript.</li>
+                    </ul>
+                    
+                    <h2>3. The Rise of Edge Computing</h2>
+                    <p>With the increasing demand for faster, more responsive web applications, edge computing is becoming essential. By processing data closer to the user, we can:</p>
+                    <ul>
+                        <li>Reduce latency for global applications</li>
+                        <li>Improve privacy by processing sensitive data locally</li>
+                        <li>Decrease server load and hosting costs</li>
+                    </ul>
+                    <p>Frameworks like Next.js and SvelteKit are making it easier than ever to leverage edge computing in web applications.</p>
+                    
+                    <h2>4. Web Components Maturity</h2>
+                    <p>Web Components have finally reached a level of maturity where they're practical for production use. The combination of Custom Elements, Shadow DOM, and HTML Templates allows for:</p>
+                    <ul>
+                        <li>Framework-agnostic component sharing</li>
+                        <li>Better encapsulation of styles and functionality</li>
+                        <li>Improved performance by reducing framework overhead</li>
+                    </ul>
+                    
+                    <h2>5. The Evolution of JavaScript</h2>
+                    <p>JavaScript continues to evolve with new features that improve developer experience and application performance:</p>
+                    <div class="code-block">
+                        <pre><code class="language-javascript">// Top-level await simplifies module initialization
+const data = await fetchData();
+
+// New array methods make data manipulation cleaner
+const activeUsers = users.filter(user => user.isActive)
+                         .toSorted((a, b) => a.name.localeCompare(b.name));
+
+// Private class fields improve encapsulation
+class User {
+    #password;
+    constructor(password) {
+        this.#password = password;
+    }
+}</code></pre>
+                    </div>
+                    
+                    <h2>Conclusion</h2>
+                    <p>The future of web development in 2023 is exciting and full of possibilities. By embracing these trends and continuously learning, developers can build faster, more accessible, and more engaging web experiences than ever before.</p>
+                    
+                    <div class="post-tags">
+                        <a href="#" class="tag">#webdev</a>
+                        <a href="#" class="tag">#javascript</a>
+                        <a href="#" class="tag">#css</a>
+                        <a href="#" class="tag">#trends</a>
+                    </div>
+                </div>
+                
+                <!-- Post Footer -->
+                <footer class="post-footer">
+                    <div class="share-buttons">
+                        <span>Share this article:</span>
+                        <a href="#" class="share-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-reddit"></i></a>
+                    </div>
+                    
+                    <div class="author-bio">
+                        <img src="mg2.jpg" alt="John Doe">
+                        <div>
+                            <h3>About John Doe</h3>
+                            <p>John is a senior developer with over 10 years of experience in web technologies. He specializes in JavaScript frameworks and performance optimization, and regularly contributes to open source projects.</p>
+                        </div>
+                    </div>
+                </footer>
+            </article>
+            
+            <!-- Related Posts -->
+            <section class="related-posts">
+                <h2>Related Articles</h2>
+                <div class="grid">
+                    <!-- Related Post 1 -->
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="javascript.jpg" alt="Blog post">
+                            <span class="badge">JavaScript</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date">June 5, 2023</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                            <h3><a href="blog-post.html">Mastering Modern JavaScript Patterns</a></h3>
+                            <p>Learn about the most useful JavaScript patterns that can help you write cleaner, more maintainable code...</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <!-- Related Post 2 -->
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <img src="Css.jpg" alt="Blog post">
+                            <span class="badge">CSS</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="post-meta">
+                                <span class="date">May 28, 2023</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <h3><a href="blog-post.html">Advanced CSS Grid Techniques</a></h3>
+                            <p>Take your CSS Grid skills to the next level with these advanced techniques and creative layout solutions...</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Comments Section -->
+            <section class="comments">
+                <h2>Discussion (3)</h2>
+                
+                <form class="comment-form">
+                    <h3>Leave a comment</h3>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Post Comment</button>
+                </form>
+                
+                <div class="comment-list">
+                    <!-- Comment 1 -->
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="mg4.jpg
+                            " alt="Sarah Johnson">
+                            <div>
+                                <span class="name">Sarah Johnson</span>
+                                <span class="date">June 16, 2023</span>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p>Great article! I've been experimenting with container queries and they're a game changer for component-based design. The browser support is finally good enough to use in production.</p>
+                            <button class="reply-btn">Reply</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="mg7.jpg" alt="Mike Chen">
+                            <div>
+                                <span class="name">Mike Chen</span>
+                                <span class="date">June 17, 2023</span>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p>I'd love to see more examples of how you're implementing AI in your workflow. Are there any specific tools you recommend beyond GitHub Copilot?</p>
+                            <button class="reply-btn">Reply</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Comment 3 -->
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="mg3.jpg" alt="Emma Rodriguez">
+                            <div>
+                                <span class="name">Emma Rodriguez</span>
+                                <span class="date">June 18, 2023</span>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p>The View Transitions API looks promising! Have you encountered any performance issues with complex transitions?</p>
+                            <button class="reply-btn">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Modern<span>Blog</span></a>
+                    <p>A modern, responsive blog with clean design and dark mode support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog-post.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Productivity</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@modernblog.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Modern Blog. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
