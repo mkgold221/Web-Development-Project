@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMania - Discover Your Next Favorite Movie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <h1>MovieMania</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active" data-section="trending">Trending</a>
+                <a href="#" data-section="popular">Popular</a>
+                <a href="#" data-section="upcoming">Upcoming</a>
+                <a href="#" data-section="favorites">My Watchlist</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search movies...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Discover Your Next Favorite Movie</h2>
+                <p>Explore thousands of movies, save your favorites, and never miss what's trending.</p>
+                <div class="search-container hero-search">
+                    <input type="text" id="hero-search-input" placeholder="Search for movies...">
+                    <button id="hero-search-btn"><i class="fas fa-search"></i> Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="trending" class="content-section active">
+            <div class="section-header">
+                <h3>Trending This Week</h3>
+                <div class="section-controls">
+                    <button class="carousel-btn prev" data-carousel="trending"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" data-carousel="trending"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="movies-container trending-movies"></div>
+        </section>
+
+        <section id="popular" class="content-section">
+            <div class="section-header">
+                <h3>Popular Movies</h3>
+                <div class="section-controls">
+                    <button class="carousel-btn prev" data-carousel="popular"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" data-carousel="popular"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="movies-container popular-movies"></div>
+            <button class="load-more" data-type="popular">Load More</button>
+        </section>
+
+        <section id="upcoming" class="content-section">
+            <div class="section-header">
+                <h3>Upcoming Releases</h3>
+                <div class="section-controls">
+                    <button class="carousel-btn prev" data-carousel="upcoming"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next" data-carousel="upcoming"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="movies-container upcoming-movies"></div>
+        </section>
+
+        <section id="favorites" class="content-section">
+            <div class="section-header">
+                <h3>My Watchlist</h3>
+            </div>
+            <div class="movies-container favorites-movies">
+                <div class="empty-state">
+                    <i class="fas fa-bookmark"></i>
+                    <p>Your watchlist is empty. Start adding movies!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-results" class="content-section">
+            <div class="section-header">
+                <h3>Search Results</h3>
+            </div>
+            <div class="movies-container search-movies"></div>
+            <button class="load-more" data-type="search">Load More</button>
+        </section>
+    </main>
+
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Filled dynamically with JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-film"></i>
+                <h3>MovieMania</h3>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 MovieMania. All rights reserved. Powered by TMDB API.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
