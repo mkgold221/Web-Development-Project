@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions Pro - Login Required</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Gate -->
+    <div id="loginGate" class="login-gate">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo">TechSolutions Pro</div>
+                <p class="tagline">Premium Digital Solutions</p>
+            </div>
+            
+            <div class="auth-card">
+                <div class="tabs">
+                    <div class="tab active" id="login-tab">Login</div>
+                    <div class="tab" id="signup-tab">Sign Up</div>
+                    <div class="tab" id="forgot-tab">Reset</div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="form-container" id="login-form">
+                    <h2>Welcome Back</h2>
+                    <p class="form-subtitle">Sign in to access premium features</p>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Sign In</button>
+                        <div class="form-links">
+                            <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                        </div>
+                    </form>
+                    <div id="loginMessage" class="message hidden"></div>
+                </div>
+                
+                <!-- Signup Form -->
+                <div class="form-container hidden" id="signup-form">
+                    <h2>Create Account</h2>
+                    <p class="form-subtitle">Join our premium platform</p>
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Create Account</button>
+                    </form>
+                    <div id="signupMessage" class="message hidden"></div>
+                </div>
+                
+                <!-- Forgot Password Form -->
+                <div class="form-container hidden" id="forgot-form">
+                    <h2>Reset Password</h2>
+                    <p class="form-subtitle">Enter your email to receive reset instructions</p>
+                    <form id="forgotForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="forgotEmail">Email Address</label>
+                            <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Reset Link</button>
+                        <div class="form-links">
+                            <a href="#" id="backToLoginLink">Back to Login</a>
+                        </div>
+                    </form>
+                    <div id="forgotMessage" class="message hidden"></div>
+                </div>
+            </div>
+            
+            <div class="login-footer">
+                <p>&copy; 2024 TechSolutions Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website (Hidden until authenticated) -->
+    <div id="mainWebsite" class="hidden">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">TechSolutions Pro</div>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="user-menu">
+                        <span class="user-email" id="userEmailDisplay"></span>
+                        <button class="btn-logout" id="logoutBtn">Logout</button>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <div class="hero-content">
+                    <h1 class="hero-title">Transform Your Digital Future</h1>
+                    <p class="hero-subtitle">Premium technology solutions for forward-thinking businesses</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn-primary">Explore Services</a>
+                        <a href="#contact" class="btn-secondary">Get Consultation</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="floating-card">
+                        <div class="card-icon">📱</div>
+                        <h3>Mobile Apps</h3>
+                    </div>
+                    <div class="floating-card">
+                        <div class="card-icon">☁️</div>
+                        <h3>Cloud Solutions</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Premium Services</h2>
+                    <p>Cutting-edge solutions tailored for your success</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Digital Transformation</h3>
+                        <p>Complete digital overhaul to modernize your business operations and customer experience.</p>
+                        <ul class="service-features">
+                            <li>Process Automation</li>
+                            <li>Legacy System Migration</li>
+                            <li>Digital Strategy</li>
+                        </ul>
+                    </div>
+                    <div class="service-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="service-icon">💻</div>
+                        <h3>Custom Development</h3>
+                        <p>Bespoke software solutions built specifically for your unique business requirements.</p>
+                        <ul class="service-features">
+                            <li>Web Applications</li>
+                            <li>Mobile Development</li>
+                            <li>API Integration</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔒</div>
+                        <h3>Enterprise Security</h3>
+                        <p>Comprehensive cybersecurity solutions to protect your valuable business assets.</p>
+                        <ul class="service-features">
+                            <li>Security Audits</li>
+                            <li>Threat Monitoring</li>
+                            <li>Compliance Management</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Data Analytics</h3>
+                        <p>Advanced analytics and business intelligence to drive data-driven decisions.</p>
+                        <ul class="service-features">
+                            <li>Business Intelligence</li>
+                            <li>Predictive Analytics</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">☁️</div>
+                        <h3>Cloud Infrastructure</h3>
+                        <p>Scalable cloud solutions for improved performance and cost efficiency.</p>
+                        <ul class="service-features">
+                            <li>Cloud Migration</li>
+                            <li>DevOps Implementation</li>
+                            <li>Infrastructure Management</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Digital Marketing</h3>
+                        <p>Strategic digital marketing campaigns to boost your online presence and growth.</p>
+                        <ul class="service-features">
+                            <li>SEO Optimization</li>
+                            <li>Social Media Strategy</li>
+                            <li>Content Marketing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="section-header">
+                            <h2>Leading Innovation Since 2014</h2>
+                            <p>Trusted by 500+ companies worldwide</p>
+                        </div>
+                        <div class="about-description">
+                            <p>TechSolutions Pro has been at the forefront of digital transformation, helping businesses leverage cutting-edge technology to achieve unprecedented growth and efficiency.</p>
+                            <p>Our team of expert developers, designers, and strategists work collaboratively to deliver solutions that not only meet today's challenges but anticipate tomorrow's opportunities.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Expert Team</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-image">
+                            <img src="/placeholder.svg?height=400&width=500" alt="About TechSolutions Pro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>Showcasing our latest innovations</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="E-commerce Platform">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce Platform</h3>
+                            <p>Complete digital transformation for retail giant</p>
+                            <div class="portfolio-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Healthcare App">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Healthcare Management</h3>
+                            <p>Mobile app for patient care coordination</p>
+                            <div class="portfolio-tags">
+                                <span>React Native</span>
+                                <span>Firebase</span>
+                                <span>ML</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Financial Dashboard">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Financial Analytics</h3>
+                            <p>Real-time dashboard for investment tracking</p>
+                            <div class="portfolio-tags">
+                                <span>Vue.js</span>
+                                <span>Python</span>
+                                <span>D3.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="section-header">
+                            <h2>Let's Build Something Amazing</h2>
+                            <p>Ready to transform your business?</p>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h4>Headquarters</h4>
+                                    <p>123 Innovation Drive<br>Tech City, TC 12345</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>hello@techsolutionspro.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interest</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-apps">Mobile Apps</option>
+                                    <option value="cloud-solutions">Cloud Solutions</option>
+                                    <option value="digital-transformation">Digital Transformation</option>
+                                    <option value="consulting">Consulting</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Project Details</label>
+                                <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                        <div id="contactFormMessage" class="message hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="logo">TechSolutions Pro</div>
+                        <p>Empowering businesses through innovative technology solutions.</p>
+                        <div class="social-links">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Mobile Apps</a></li>
+                            <li><a href="#services">Cloud Solutions</a></li>
+                            <li><a href="#services">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 TechSolutions Pro. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Firebase SDK and Script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
