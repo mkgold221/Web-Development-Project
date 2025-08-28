@@ -70,7 +70,14 @@ themeToggle.addEventListener("click", () => {
 
 // Enhanced Typing Effect
 const typingText = document.getElementById("typing")
-const words = ["Data Analyst", "Frontend Developer","Tech Content Creator", "Python Programmer", "Problem Solver", "Tech Enthusiast"]
+const words = [
+  "Data Analyst",
+  "Frontend Developer",
+  "Tech Content Creator",
+  "Python Programmer",
+  "Problem Solver",
+  "Tech Enthusiast",
+]
 let wordIndex = 0
 let charIndex = 0
 let isDeleting = false
@@ -242,14 +249,6 @@ const observer = new IntersectionObserver((entries) => {
   })
 }, observerOptions)
 
-// Observe all animated elements
-document.addEventListener("DOMContentLoaded", () => {
-  const animatedElements = document.querySelectorAll(
-    ".fade-in, .slide-in-left, .slide-in-right, .skill-item-animate, .project-animate, .testimonial-animate, .certificate-animate, .contact-animate, .form-animate",
-  )
-  animatedElements.forEach((el) => observer.observe(el))
-})
-
 // Enhanced Scroll Effects
 let lastScrollTop = 0
 const header = document.querySelector("header")
@@ -308,24 +307,29 @@ if (backToTop) {
   })
 }
 
-// Enhanced Contact Form with Success Popup
 const form = document.querySelector(".contact-form")
 const successMessage = document.getElementById("success-message")
 const successPopup = document.getElementById("success-popup")
 const successSound = document.getElementById("success-sound")
 
 if (form && successMessage) {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault()
 
-    // Add loading state
     const submitBtn = form.querySelector(".submit-btn")
     const originalText = submitBtn.textContent
     submitBtn.textContent = "Sending..."
     submitBtn.disabled = true
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send form data to FormSubmit
+      const formData = new FormData(form)
+      await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      })
+
       // Show success popup
       showSuccessPopup()
 
@@ -337,13 +341,16 @@ if (form && successMessage) {
       // Reset form
       form.reset()
 
+      // Hide old success message
+      successMessage.style.display = "none"
+    } catch (error) {
+      console.error("Form submission failed:", error)
+      alert("Something went wrong. Please try again.")
+    } finally {
       // Reset button
       submitBtn.textContent = originalText
       submitBtn.disabled = false
-
-      // Hide old success message
-      successMessage.style.display = "none"
-    }, 1000)
+    }
   })
 }
 
@@ -369,7 +376,6 @@ function closeSuccessPopup() {
 
 function sendAnotherMessage() {
   closeSuccessPopup()
-  // Scroll to contact form
   const contactSection = document.getElementById("contact")
   if (contactSection) {
     contactSection.scrollIntoView({ behavior: "smooth" })
@@ -391,6 +397,7 @@ document.addEventListener("keydown", (event) => {
     closeSuccessPopup()
   }
 })
+
 
 // Certificate Modal
 function openModal(card) {
@@ -481,34 +488,91 @@ document.addEventListener("DOMContentLoaded", () => {
   revealElements.forEach((el, index) => {
     el.style.animationDelay = `${index * 0.1}s`
   })
+
+  initTabSwitching()
+
+  const animatedElements = document.querySelectorAll(
+    ".fade-in, .slide-in-left, .slide-in-right, .skill-item-animate, .project-animate, .testimonial-animate, .certificate-animate, .contact-animate, .form-animate",
+  )
+  animatedElements.forEach((el) => observer.observe(el))
 })
 
+// Tab switching functionality
+function initTabSwitching() {
+  const tabButtons = document.querySelectorAll(".tab-btn")
+  const tabContents = document.querySelectorAll(".tab-content")
 
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTab = button.getAttribute("data-tab")
+      const section = button.closest("section")
+      const sectionTabButtons = section.querySelectorAll(".tab-btn")
+      const sectionTabContents = section.querySelectorAll(".tab-content")
 
-    const form = e.target;
-    const formData = new FormData(form);
+      // Remove active class from all buttons in this section
+      sectionTabButtons.forEach((btn) => {
+        btn.classList.remove("active")
+      })
 
-    fetch("https://formsubmit.co/ajax/idowumalik32@gmail.com", {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        // Show success message
-        document.getElementById('success-message').style.display = 'block';
-        form.reset(); // Clear form
-      } else {
-        alert("There was a problem submitting the form.");
+      // Hide all tab contents in this section
+      sectionTabContents.forEach((content) => {
+        content.classList.remove("active", "slide-in-left", "slide-in-right")
+        content.style.display = "none"
+      })
+
+      // Add active class to clicked button
+      button.classList.add("active")
+
+      // Show target tab content with animation
+      const targetContent = document.getElementById(targetTab)
+      if (targetContent) {
+        targetContent.style.display = "block"
+
+        // Add slide animation based on tab direction
+        const isDataTab = targetTab.includes("data")
+        const animationClass = isDataTab ? "slide-in-right" : "slide-in-left"
+
+        setTimeout(() => {
+          targetContent.classList.add("active", animationClass)
+        }, 10)
+
+        // Re-trigger animations for elements within the tab
+        const animatedElements = targetContent.querySelectorAll(
+          ".project-animate, .testimonial-animate, .certificate-animate",
+        )
+        animatedElements.forEach((el, index) => {
+          el.style.animation = "none"
+          el.offsetHeight // Trigger reflow
+          el.style.animation = `fadeInUp 0.8s ease forwards`
+          el.style.animationDelay = `${index * 0.1}s`
+        })
       }
     })
-    .catch(error => {
-      console.error("Form submission error:", error);
-      alert("An error occurred. Please try again.");
-    });
-  });
+  })
+}
 
+const enhancedObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1"
+        entry.target.style.transform = "translateY(0)"
+
+        // Add stagger effect for multiple elements
+        if (
+          entry.target.classList.contains("skill-item-animate") ||
+          entry.target.classList.contains("project-animate") ||
+          entry.target.classList.contains("testimonial-animate") ||
+          entry.target.classList.contains("certificate-animate")
+        ) {
+          const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100
+          entry.target.style.animationDelay = `${delay}ms`
+        }
+      }
+    })
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  },
+)
