@@ -66,6 +66,8 @@ themeToggle.addEventListener("click", () => {
   setTimeout(() => {
     body.style.transition = ""
   }, 300)
+
+  console.log("[v0] Theme switched to:", newTheme)
 })
 
 // Enhanced Typing Effect
@@ -327,7 +329,7 @@ if (form && successMessage) {
       await fetch(form.action, {
         method: "POST",
         body: formData,
-        headers: { Accept: "application/json" }
+        headers: { Accept: "application/json" },
       })
 
       // Show success popup
@@ -398,7 +400,6 @@ document.addEventListener("keydown", (event) => {
   }
 })
 
-
 // Certificate Modal
 function openModal(card) {
   const modal = document.getElementById("modal")
@@ -419,6 +420,204 @@ function closeModal() {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModal()
+  }
+})
+
+// Project Modal Functions
+function openProjectModal(projectCard) {
+  const modal = document.getElementById("project-modal")
+  const modalImage = document.getElementById("modal-project-image")
+  const modalTitle = document.getElementById("modal-project-title")
+  const modalIntro = document.getElementById("modal-project-intro")
+  const modalLinks = document.getElementById("modal-project-links")
+  const modalContent = document.getElementById("modal-project-content")
+  const modalSkills = document.getElementById("modal-project-skills")
+
+  // Get project data from the card - updated selectors for new structure
+  const image = projectCard.querySelector(".project-header img").src
+  const title = projectCard.querySelector(".project-content .project-title").textContent
+  const intro = projectCard.querySelector(".project-content .project-intro").textContent
+  const links = projectCard.querySelector(".project-overlay .project-links").innerHTML
+  const details = projectCard.querySelector(".project-content .project-details").innerHTML
+  const skills = projectCard.querySelector(".project-content .skills-used").innerHTML
+
+  // Populate modal
+  modalImage.src = image
+  modalTitle.textContent = title
+  modalIntro.textContent = intro
+  modalLinks.innerHTML = links
+  modalContent.innerHTML = details
+  modalSkills.innerHTML = skills
+
+  // Show modal
+  modal.classList.add("show")
+  document.body.style.overflow = "hidden"
+}
+
+function closeProjectModal() {
+  const modal = document.getElementById("project-modal")
+  modal.classList.remove("show")
+  document.body.style.overflow = "auto"
+}
+
+// Add click listeners to project cards
+document.addEventListener("DOMContentLoaded", () => {
+  const projectCards = document.querySelectorAll(".project-card")
+  projectCards.forEach((card) => {
+    card.addEventListener("click", () => openProjectModal(card))
+  })
+})
+
+// AI Chat Functions
+let isChatOpen = false
+
+function toggleAIChat() {
+  const chatContainer = document.getElementById("ai-chat-container")
+  isChatOpen = !isChatOpen
+
+  if (isChatOpen) {
+    chatContainer.classList.add("show")
+  } else {
+    chatContainer.classList.remove("show")
+  }
+}
+
+function handleAIKeyPress(event) {
+  if (event.key === "Enter") {
+    sendAIMessage()
+  }
+}
+
+function sendAIMessage() {
+  const input = document.getElementById("ai-input")
+  const message = input.value.trim()
+
+  if (message) {
+    addUserMessage(message)
+    input.value = ""
+
+    // Simulate AI response
+    setTimeout(() => {
+      const response = generateAIResponse(message)
+      addAIMessage(response)
+    }, 1000)
+  }
+}
+
+function askQuickQuestion(question) {
+  const input = document.getElementById("ai-input")
+  input.value = question
+  sendAIMessage()
+}
+
+function addUserMessage(message) {
+  const messagesContainer = document.getElementById("ai-chat-messages")
+  const messageDiv = document.createElement("div")
+  messageDiv.className = "user-message"
+  messageDiv.innerHTML = `
+    <div class="user-avatar-small">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="message-content">
+      <p>${message}</p>
+    </div>
+  `
+  messagesContainer.appendChild(messageDiv)
+  messagesContainer.scrollTop = messagesContainer.scrollHeight
+}
+
+function addAIMessage(message) {
+  const messagesContainer = document.getElementById("ai-chat-messages")
+  const messageDiv = document.createElement("div")
+  messageDiv.className = "ai-message"
+  messageDiv.innerHTML = `
+    <div class="ai-avatar-small">
+      <i class="fas fa-robot"></i>
+    </div>
+    <div class="message-content">
+      <p>${message}</p>
+    </div>
+  `
+  messagesContainer.appendChild(messageDiv)
+  messagesContainer.scrollTop = messagesContainer.scrollHeight
+}
+
+function generateAIResponse(userMessage) {
+  const message = userMessage.toLowerCase()
+
+  // Skills-related responses
+  if (message.includes("skill") || message.includes("technology") || message.includes("tech")) {
+    return "Idowu is a versatile professional with expertise in both Frontend Development and Data Analysis. His frontend skills include HTML5, CSS3, JavaScript ES6+, React.js, Bootstrap, and Tailwind CSS. For data analysis, he's proficient in Python, SQL, Excel, Power BI, Tableau, and specialized libraries like Pandas, NumPy, Matplotlib, and Seaborn. He also has experience with database management, statistical analysis, and creating interactive dashboards."
+  }
+
+  // Projects-related responses
+  if (message.includes("project") || message.includes("work") || message.includes("portfolio")) {
+    return "Idowu's portfolio showcases professional-grade solutions across multiple domains. His frontend projects include modern e-commerce platforms, interactive movie databases, restaurant booking systems, authentication systems, real estate websites, and online learning platforms. His data analysis projects feature comprehensive sales analysis, interactive dashboards, advanced SQL data cleaning, and machine learning applications. Each project demonstrates business problem-solving with measurable impact and technical excellence."
+  }
+
+  // Experience-related responses
+  if (message.includes("experience") || message.includes("background") || message.includes("about")) {
+    return "Idowu has over 2 years of professional experience in Web Development, Data Analysis, and Python programming. He holds a Computer Science degree and has completed certifications in Responsive Web Design and Data Analytics. His expertise spans from creating responsive web applications to uncovering meaningful insights from complex datasets. He's passionate about transforming ideas into digital reality and helping businesses make data-driven decisions."
+  }
+
+  // Contact-related responses
+  if (
+    message.includes("contact") ||
+    message.includes("reach") ||
+    message.includes("hire") ||
+    message.includes("email")
+  ) {
+    return "You can contact Idowu at idowumalik32@gmail.com or call +44 0806 170 4510. He's based in Manchester, United Kingdom, and available for both remote and on-site opportunities. Connect with him on LinkedIn (malik-idowu), GitHub (mkgold221), Instagram (@codewithmalik3), Twitter (@GoldMk67), or TikTok (@code_with_malik). He's currently looking for new opportunities and exciting projects to work on!"
+  }
+
+  // Location-related responses
+  if (message.includes("location") || message.includes("where") || message.includes("based")) {
+    return "Idowu is currently based in Manchester, United Kingdom. He's available for both remote work opportunities and on-site positions. His location allows him to work across different time zones and collaborate with international teams effectively."
+  }
+
+  // Services-related responses
+  if (message.includes("service") || message.includes("offer") || message.includes("do")) {
+    return "Idowu offers comprehensive digital solutions including: Data Visualization & Analytics, Data Cleaning & Processing, Business Intelligence & Insights, Modern Web Development, Responsive Design & UI/UX, Custom Dashboard Creation, Statistical Analysis & Reporting, and Python Automation. He specializes in transforming complex data into actionable insights and creating beautiful, functional websites that drive business results."
+  }
+
+  // Portfolio quality responses
+  if (
+    message.includes("quality") ||
+    message.includes("professional") ||
+    message.includes("good") ||
+    message.includes("expert")
+  ) {
+    return "Idowu's portfolio demonstrates professional-grade expertise through comprehensive project documentation, measurable business impact, technical excellence with 90+ Lighthouse scores, and real-world problem-solving. Each project includes detailed case studies showing business problems solved, technical implementation, and quantifiable results. His work spans multiple industries and technologies, showcasing versatility and deep technical knowledge that proves his capability to deliver high-quality solutions."
+  }
+
+  // Default response
+  return "I'm here to help you learn more about Idowu's professional capabilities! You can ask me about his technical skills, portfolio projects, work experience, services offered, or how to get in touch with him. His portfolio demonstrates expertise in both frontend development and data analysis, with proven results and professional-grade solutions. What specific information would you like to know?"
+}
+
+// Close modals when clicking outside
+document.addEventListener("click", (e) => {
+  const projectModal = document.getElementById("project-modal")
+  const aiChatContainer = document.getElementById("ai-chat-container")
+  const aiChatToggle = document.querySelector(".ai-chat-toggle")
+
+  // Close project modal when clicking outside
+  if (e.target === projectModal) {
+    closeProjectModal()
+  }
+
+  // Close AI chat when clicking outside
+  if (isChatOpen && !aiChatContainer.contains(e.target) && !aiChatToggle.contains(e.target)) {
+    toggleAIChat()
+  }
+})
+
+// Close modals with Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeProjectModal()
+    if (isChatOpen) {
+      toggleAIChat()
+    }
   }
 })
 
@@ -475,21 +674,27 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Set initial theme
   const savedTheme = localStorage.getItem("theme") || "dark"
-  document.body.setAttribute("data-theme", savedTheme)
+  body.setAttribute("data-theme", savedTheme)
+  console.log("[v0] Initial theme set to:", savedTheme)
+
+  // Initialize tab switching first
+  setTimeout(() => {
+    initTabSwitching()
+    console.log("[v0] Tab switching initialized")
+  }, 100)
 
   // Initialize particles after a short delay
   setTimeout(() => {
     initParticles()
     updateParticlesColor()
-  }, 100)
+    console.log("[v0] Particles initialized")
+  }, 200)
 
   // Add smooth reveal animations
   const revealElements = document.querySelectorAll(".fade-in")
   revealElements.forEach((el, index) => {
     el.style.animationDelay = `${index * 0.1}s`
   })
-
-  initTabSwitching()
 
   const animatedElements = document.querySelectorAll(
     ".fade-in, .slide-in-left, .slide-in-right, .skill-item-animate, .project-animate, .testimonial-animate, .certificate-animate, .contact-animate, .form-animate",
@@ -499,11 +704,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Tab switching functionality
 function initTabSwitching() {
+  const sections = document.querySelectorAll("section")
+  sections.forEach((section) => {
+    const tabButtons = section.querySelectorAll(".tab-btn")
+    const tabContents = section.querySelectorAll(".tab-content")
+
+    if (tabButtons.length > 0 && tabContents.length > 0) {
+      // Set first tab as active
+      tabButtons[0].classList.add("active")
+      tabContents[0].classList.add("active")
+      tabContents[0].style.display = "block"
+
+      // Hide other tabs
+      for (let i = 1; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active")
+        tabContents[i].style.display = "none"
+      }
+    }
+  })
+
   const tabButtons = document.querySelectorAll(".tab-btn")
-  const tabContents = document.querySelectorAll(".tab-content")
 
   tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault()
       const targetTab = button.getAttribute("data-tab")
       const section = button.closest("section")
       const sectionTabButtons = section.querySelectorAll(".tab-btn")
@@ -528,12 +752,9 @@ function initTabSwitching() {
       if (targetContent) {
         targetContent.style.display = "block"
 
-        // Add slide animation based on tab direction
-        const isDataTab = targetTab.includes("data")
-        const animationClass = isDataTab ? "slide-in-right" : "slide-in-left"
-
+        // Add slide animation
         setTimeout(() => {
-          targetContent.classList.add("active", animationClass)
+          targetContent.classList.add("active", "slide-in-left")
         }, 10)
 
         // Re-trigger animations for elements within the tab
