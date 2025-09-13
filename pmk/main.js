@@ -797,3 +797,30 @@ const enhancedObserver = new IntersectionObserver(
     rootMargin: "0px 0px -50px 0px",
   },
 )
+
+
+// Add this to your main.js file
+function adjustHeroPadding() {
+  const header = document.querySelector('header');
+  const hero = document.querySelector('.hero');
+  
+  if (header && hero) {
+    const headerHeight = header.offsetHeight;
+    if (window.innerWidth <= 768) {
+      hero.style.paddingTop = `calc(${headerHeight}px + 2rem)`;
+    } else {
+      hero.style.paddingTop = '';
+    }
+  }
+}
+
+// Run on load and resize
+window.addEventListener('load', adjustHeroPadding);
+window.addEventListener('resize', adjustHeroPadding);
+
+// Also call this in your DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+  adjustHeroPadding();
+  // ... your existing DOMContentLoaded code
+});
+

@@ -273,7 +273,7 @@ nav {
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .theme-toggle:hover {
@@ -2814,7 +2814,8 @@ a:focus {
   }
 }
 
-@media(min-width:365px) and (max-width: 1024px) {
+
+@media (max-width: 1024px) {
   .header-controls{
     /* border: 2px solid red; */
     display: flex;
@@ -2950,3 +2951,139 @@ a:focus {
   }
 }
 
+
+@media (max-width: 1024px) {
+  .header-controls{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    gap: 7px;
+  }
+  .header{
+    position: fixed;
+  }
+}
+
+/* Add this to your existing style.css file */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 5% 3rem;
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0 !important; /* Remove any margin-top that might be causing issues */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    order: 2; /* Move content below the visual elements on mobile */
+  }
+
+  .hero-right-content {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 2rem 0;
+    order: 1; /* Move visual elements above content on mobile */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .floating-code-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .tech-orbit {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .code-snippet {
+    font-size: 0.7rem;
+    padding: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .button-wrapper {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 5rem 5% 2rem;
+  }
+
+  .floating-code-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .code-snippet {
+    font-size: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  .pulse-ring {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Fix for header spacing on mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 0.8rem 5%;
+  }
+  
+  .header-controls {
+    margin-right: 15px;
+    gap: 5px;
+  }
+}
+
+/* Remove the problematic media query at the end of your CSS */
+@media (max-width: 485px) {
+  .hero {
+    padding-top: 120px; /* Adjusted for fixed header */
+    margin-top: 0;
+    /* Remove the border: 2px solid red; - this was for debugging only */
+  }
+}
