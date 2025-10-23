@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" href="logo.png" type="image/x-icon"> -->
+
+</head>
+<body>
+    <header class="header">
+  <div class="container">
+    <div class="logo">
+      <!-- <img src="logo.png" alt="Websifyapp Logo" /> -->
+      <span>Websifyapp</span>
+    </div>
+    
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#About">About</a></li>
+
+        <li class="dropdown">
+          <a href="#Services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#WebDevelopment">Web Development</a></li>
+            <li><a href="#AppDevelopment">App Development</a></li>
+            <li><a href="#UIUXDesign">UI/UX Design</a></li>
+            <li><a href="#MaintenanceHosting">Maintenance & Hosting</a></li>
+            <li><a href="#BrandingSolutions">Branding Solutions</a></li>
+          </ul>
+        </li>
+
+        <li><a href="portfolio.html">Portfolio</a></li>
+
+        <li class="dropdown">
+          <a href="pricing.html">Pricing ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="pricing.html#website">Website Packages</a></li>
+            <li><a href="pricing.html#app">App Packages</a></li>
+            <li><a href="pricing.html#custom">Custom Quote</a></li>
+            <li><a href="pricing.html#maintenance">Maintenance Plans</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Resources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Faqs">FAQs</a></li>
+            <li><a href="#Testimonials">Testimonials</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+          <a href="#" class="theme-toggle" id="themeToggle">
+            <span class="toggle-icon toggle-sun">
+              <i class="fas fa-sun"></i>
+            </span>
+            <span class="toggle-text">Light</span>
+            <div class="toggle-switch">
+              <div class="toggle-slider"></div>
+            </div>
+            <span class="toggle-icon toggle-moon">
+              <i class="fas fa-moon"></i>
+            </span>
+            <span class="toggle-text">Dark</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+</header>
+<!-- Hero Section -->
+   <section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Transforming Ideas into Stunning Digital Products</h1>
+            <p>At Websifyapp, we craft high-performing websites and mobile apps that blend creativity with cutting-edge technology. From design to deployment, we build digital experiences that captivate, engage, and inspire.</p>
+            <div class="hero-buttons">
+                <a href="portfolio.html" class="btns btn-primary">View Our Work</a>
+                <a href="contact.html" class="btns btn-secondary">Start a Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="About" class="about-section">
+        <div class="container-fluid">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <h2>ABOUT US</h2>
+                <!-- <h2>Websifyapp</h2> -->
+            </div>
+            <div class="rows align-items-center mb-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-content-card">
+                        <div class="about-intro">
+                            <p>Websifyapp are the best web designers in World. We are passionate about helping businesses in the retail, finance, health and corporate industries fully leverage the latest <a href="https://www.sciencedirect.com/topics/computer-science/software-technology">software technologies</a>. As a top web design company in Lagos and Abuja, our tech team is dedicated to create websites that meet your exact needs because we pride ourselves on being the best web designers in West Africa.</p>
+                            <p class="mt-4">We build corporate business websites and ecommerce websites for all kinds of businesses across <a href="https://kpakpakpa.com/industries-in-nigeria/">industries in World </a> and beyond. Our services include responsive website design, ecommerce website development via Shopify or WooCommerce, WordPress web development, website maintenance, website redesign, SEO, mobile app dev, social media management and many more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="about-stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Award Winning</h4>
+                                <p>Best Web Designers in West Africa</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>1500+ Clients</h4>
+                                <p>Satisfied customers nationwide</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Lagos & Abuja</h4>
+                                <p>Offices in major cities</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>24/7 Support</h4>
+                                <p>Always here to help you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services, Mission & Vision Cards -->
+            <div class="rows">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Our Key Services</h3>
+                        <ul class="feature-list">
+                            <li><strong>Web Development</strong>: We create custom websites developed to your business needs and goals.</li>
+                            <li><strong>E-commerce Development</strong>: Our <a href="/ecommerce-website-design-in-nigeria/">ecommerce web design</a> provides you online stores that drive sales.</li>
+                            <li><strong>SEO</strong>: We help you grow your brand's organic traffic via our world's leading <a href="/seo-company-in-nigeria">SEO services</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="about-feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <ul class="feature-list">
+                            <li>To help businesses build their brand through professional websites that drive in sales.</li>
+                            <li>To create websites and software solutions that perfectly align with each client's specific needs and goals.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="about-feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <ul class="feature-list">
+                            <li>To become the best web designers in World known for delivering exceptional, results-driven web app solutions.</li>
+                            <li>To empower businesses & individuals across Africa with premium <a href="https://crosstechcom.com/the-6-forms-of-digital-solution/">digital solutions</a> that drive growth and success.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="Skills" class="tech-stack-section compact-view">
+        <div class="containerss">
+            <div class="section-header">
+                <p class="section-label">OUR TECHNICAL EXPERTISE</p>
+                <h2 class="section-title">Technology Stack</h2>
+                <p class="section-subtitle">Comprehensive full-stack development capabilities for web and mobile applications</p>
+            </div>
+            
+            <div class="tech-categories">
+                <!-- Frontend Development -->
+                <div class="tech-category Frontend">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                        <p>Modern, responsive user interfaces</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="tech-name">React.js</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="95"></div>
+                            </div>
+                        </div>
+                       
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="tech-name">JavaScript ES6+</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="98"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="tech-name">HTML5</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="98"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="tech-name">CSS3/SASS</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="96"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <span class="tech-name">Bootstrap</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="tech-category Backend">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Robust server-side solutions</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span class="tech-name">Node.js</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="94"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="tech-name">Python/Django</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="88"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-name">PostgreSQL</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="90"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-name">MongoDB</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <span class="tech-name">RESTful APIs</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="95"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="tech-category App">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Development</h3>
+                        <p>Cross-platform & native apps</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="tech-name">React Native</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="92"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-swift"></i>
+                            </div>
+                            <span class="tech-name">iOS Swift</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="85"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <span class="tech-name">Android Kotlin</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="83"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-apple"></i>
+                            </div>
+                            <span class="tech-name">Flutter</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="78"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span class="tech-name">Ionic</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="tech-category Tools">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Platforms</h3>
+                        <p>Development workflow & deployment</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span class="tech-name">Git/GitHub</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="96"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <span class="tech-name">Figma</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="88"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <span class="tech-name">WordPress</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="90"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <span class="tech-name">Shopify</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="85"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <span class="tech-name">SEO Tools</span>
+                            <div class="tech-progress">
+                                <div class="progress-bar" data-skill="82"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-section" id="Services">
+        <div class="section-header">
+            <p class="section-subtitle">Our Expertise</p>
+            <h2 class="section-title">Professional Services</h2>
+            <p class="section-description">
+                We deliver cutting-edge digital solutions that drive growth and transform businesses in the digital era.
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Web Development -->
+            <div class="service-card" id="WebDevelopment">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-description">
+                    Custom websites and web applications built with modern technologies to deliver exceptional user experiences.
+                </p>
+                <ul class="service-features">
+                    <li>Responsive Design</li>
+                    <li>E-commerce Solutions</li>
+                    <li>CMS Development</li>
+                    <li>API Integration</li>
+                </ul>
+                <a href="#" class="service-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- App Development -->
+            <div class="service-card" id="AppDevelopment">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="service-title">App Development</h3>
+                <p class="service-description">
+                    Native and cross-platform mobile applications designed for performance and user engagement.
+                </p>
+                <ul class="service-features">
+                    <li>iOS & Android Apps</li>
+                    <li>Cross-Platform Solutions</li>
+                    <li>UI/UX Focused</li>
+                    <li>App Store Optimization</li>
+                </ul>
+                <a href="#" class="service-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- UI/UX Design -->
+            <div class="service-card" id="UIUXDesign">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="service-title">UI/UX Design</h3>
+                <p class="service-description">
+                    User-centered design solutions that create intuitive and engaging digital experiences.
+                </p>
+                <ul class="service-features">
+                    <li>User Research</li>
+                    <li>Wireframing & Prototyping</li>
+                    <li>Visual Design</li>
+                    <li>Usability Testing</li>
+                </ul>
+                <a href="#" class="service-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Maintenance & Hosting -->
+            <div class="service-card" id="MaintenanceHosting">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3 class="service-title">Maintenance & Hosting</h3>
+                <p class="service-description">
+                    Reliable hosting solutions and ongoing maintenance to keep your digital assets running smoothly.
+                </p>
+                <ul class="service-features">
+                    <li>Cloud Hosting</li>
+                    <li>Security Monitoring</li>
+                    <li>Performance Optimization</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <a href="#" class="service-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Branding Solutions -->
+            <div class="service-card" id="BrandingSolutions">
+                <div class="service-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="service-title">Branding Solutions</h3>
+                <p class="service-description">
+                    Comprehensive branding strategies that build strong brand identity and market presence.
+                </p>
+                <ul class="service-features">
+                    <li>Logo & Identity Design</li>
+                    <li>Brand Strategy</li>
+                    <li>Marketing Materials</li>
+                    <li>Brand Guidelines</li>
+                </ul>
+                <a href="#" class="service-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card" id="DigitalMarketing">
+            <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="service-title">Digital Marketing</h3>
+            <p class="service-description">
+                Data-driven marketing strategies to increase your online visibility and drive qualified traffic.
+            </p>
+            <ul class="service-features">
+                <li>SEO Optimization</li>
+                <li>Social Media Marketing</li>
+                <li>Content Strategy</li>
+                <li>Analytics & Reporting</li>
+            </ul>
+            <a href="#" class="service-link">
+                Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        </div>
+    </section>
+
+   <div class="faq" id="Faqs">
+        <div class="section-header">
+            <p>FREQUENTLY ASKED QUESTIONS</p>
+            <h2 style="color: var(--text-primary);">Website & App Development FAQs</h2>
+        </div>
+
+        <div class="faq-tabs">
+            <div class="faq-tab active" data-category="website">
+                <i class="fas fa-globe"></i>
+                Website Development
+            </div>
+            <div class="faq-tab" data-category="app">
+                <i class="fas fa-mobile-alt"></i>
+                App Development
+            </div>
+        </div>
+
+        <!-- Website Development FAQs -->
+        <div class="faq-category active" id="website-faqs">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">How long does it take to develop a website?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>The time it takes to create your website depends on its complexity and the features you want. A basic website with a few pages and standard functionality can typically be completed within 2 to 4 Days. If you need a more advanced site — such as an eCommerce platform, or one with custom development — it might take 6 to 12 Days to ensure everything is properly designed, developed, tested, and optimized.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What is the pricing for your web development services?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>Our pricing is project-based and depends on factors such as the site's complexity, number of pages, and required features. We offer affordable packages to ensure we work with your budget. We've also got discounts running all year long. Please check out our <a href="pricing.html#web"><u> Pricing page</u></a> or contact us for a customized quote!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What types of websites do you create?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>We build all types of websites, including Corporate, E-Commerce, Educational, Real Estate, Fintech, Blogs, Portfolio sites, and many more. Whatever your needs are, we create websites that suit your requirements and taste.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you provide post-launch maintenance?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>After your website goes live, we offer a month of technical support and website maintenance at no extra cost. This ensures your site remains secure, updated, and optimized for performance. After the first month, you can also choose a maintenance plan that suits your needs to keep our support going.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What do you need from me to get started?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>To get started, we'll need details about your business operations, content (text, images), and any design preferences you have. If you already have a domain and hosting, great! If not, we can assist you purchase them. Once we have these, we'll begin the development process right away!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- App Development FAQs -->
+        <div class="faq-category" id="app-faqs">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">How long does it take to develop a mobile app?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>Mobile app development timelines vary based on complexity. A simple app with basic features typically takes 5-6 Days, while more complex applications with advanced functionality, integrations, and custom UI/UX can take 8-10 weeks or more. We'll provide a detailed timeline after understanding your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you develop for both iOS and Android?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>Yes! We develop native apps for both iOS and Android platforms. We also offer cross-platform development using React Native and Flutter, which allows you to reach both platforms with a single codebase, reducing development time and cost while maintaining native-like performance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What is included in your app development package?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>Our comprehensive app development package includes: UI/UX design, frontend and backend development, API integrations, testing across multiple devices, deployment to app stores, and post-launch support. We also provide documentation and training for your team.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How much does app development cost?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>App development costs range from $1,000 for simple apps to $50,000+ for complex enterprise applications. The final cost depends on features, platforms, design complexity, and integrations. We offer transparent pricing and can work with various budget ranges.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you help with app store submission?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>Absolutely! We handle the entire app store submission process for both Apple App Store and Google Play Store. This includes preparing all required assets, creating store listings, managing the submission process, and addressing any review feedback from the stores.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What ongoing support do you provide after app launch?
+                        <span class="faq-icon">+</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>We provide 3 months of free technical support after launch, including bug fixes and minor updates. After that, we offer flexible maintenance plans that include regular updates, security patches, performance monitoring, and compatibility updates for new OS versions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="testimonial-section" id="Testimonials">          
+        <div class="testimonial-header">
+  <p>OUR CLIENTS SAY</p>
+  <h2>What People Think About Us</h2>
+</div>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Absolutely thrilled with the results! The team delivered a stunning, fast, and fully responsive website that boosted our sales.”
+      </p>
+      <div class="testimonial-footer">
+        <img src="/Images/data test.jpg" alt="Client photo" class="testimonial-avatar">
+        <div class="testimonial-info">
+          <h3 class="client-name">Sarah Johnson</h3>
+          <p class="client-role">Marketing Director, Horizon Corp</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Their attention to detail and design quality were beyond expectations. We’ve received so much positive feedback from our clients.”
+      </p>
+      <div class="testimonial-footer">
+        <img src="/Images/mg7.jpg" alt="Client photo" class="testimonial-avatar">
+        <div class="testimonial-info">
+          <h3 class="client-name">David Kim</h3>
+          <p class="client-role">Founder, Playwear Outfitters</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Professional, fast, and creative! They transformed our idea into a modern platform that truly represents our brand.”
+      </p>
+      <div class="testimonial-footer">
+        <img src="/Images/mg4.jpg" alt="Client photo" class="testimonial-avatar">
+        <div class="testimonial-info">
+          <h3 class="client-name">Emily Carter</h3>
+          <p class="client-role">CEO, TechVibe</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-promo">
+    <div class="promo-icon">
+        <i class="fas fa-rocket"></i>
+    </div>
+    
+    <h1 class="promo-heading">Looking to Create a Website and App?</h1>
+    
+    <p class="promo-text">
+        Contact <span class="brand-name">Websifyapp</span> - Top Web Design Company in West Africa. 
+        We develop the best web apps!
+    </p>
+    
+    <a href="contact.html" class="action-btn">
+        Get Started Now
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    
+    <div class="services-showcase">
+        <div class="service-item">
+            <div class="service-badge">
+                <i class="fas fa-globe"></i>
+            </div>
+            <span class="service-label">Modern Websites</span>
+        </div>
+        <div class="service-item">
+            <div class="service-badge">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <span class="service-label">Mobile Apps</span>
+        </div>
+        <div class="service-item">
+            <div class="service-badge">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <span class="service-label">Fast & Reliable</span>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <!-- Brand Section -->
+        <div class="footer-brand">
+            <div class="brand-logo">Websifyapp</div>
+            <p class="brand-tagline">Creating exceptional digital experiences that drive business growth and success across West Africa.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61582788380567" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/GoldMk67?s=09" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/codewithmalik3?igsh=MWdkOHdyNGIwdWV6YQ==" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-section">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="index.html#About">About Us <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="index.html#Services">Services <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="portfolio.html">Portfolio <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links-section">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+                <li><a href="#">Web Development <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">App Development <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">UI/UX Design <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Digital Marketing <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Branding <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="footer-contact">
+            <h3 class="footer-heading">Contact Info</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text">Lagos West Africa</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text">+2349044410020</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text">Websifyapp@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <p class="newsletter-text">Subscribe to our newsletter for updates</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Websifyapp. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/2349044410020" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+    
+</body>
+<script src="/JS/script.js"></script>
+</html>
