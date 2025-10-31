@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Websifyapp</title>
+    <link rel="stylesheet" href="pricing.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap">
+
+<!-- Defer non-critical CSS -->
+      <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header class="header">
+  <div class="container">
+    <div class="logo">
+      <span>Websifyapp</span>
+    </div>
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#About">About</a></li>
+
+        <li class="dropdown">
+          <a href="index.html#Services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#WebDevelopment">Web Development</a></li>
+            <li><a href="index.html#AppDevelopment">App Development</a></li>
+            <li><a href="index.html#UIUXDesign">UI/UX Design</a></li>
+            <li><a href="index.html#MaintenanceHosting">Maintenance & Hosting</a></li>
+            <li><a href="index.html#BrandingSolutions">Branding Solutions</a></li>
+          </ul>
+        </li>
+
+        <li><a href="portfolio.html">Portfolio</a></li>
+
+        <li class="dropdown">
+          <a href="pricing.html">Pricing ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="pricing.html#website">Website Packages</a></li>
+            <li><a href="pricing.html#app">App Packages</a></li>
+            <li><a href="pricing.html#custom">Custom Quote</a></li>
+            <li><a href="pricing.html#maintenance">Maintenance Plans</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Resources ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#Skills">Skills</a></li>
+            <li><a href="index.html#Faqs">FAQs</a></li>
+            <li><a href="index.html#Testimonials">Testimonials</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="" class="theme-toggle" id="themeToggle">
+            <span class="toggle-icon toggle-sun">
+              <i class="fas fa-sun"></i>
+            </span>
+            <span class="toggle-text">Light</span>
+            <div class="toggle-switch">
+              <div class="toggle-slider"></div>
+            </div>
+            <span class="toggle-icon toggle-moon">
+              <i class="fas fa-moon"></i>
+            </span>
+            <span class="toggle-text">Dark</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+</header>
+   
+
+  <!-- Hero Section -->
+  <section class="price-showcase">
+    <div class="wrapper">
+        <div class="hero-content">
+            <h1 class="main-heading">Transparent Pricing</h1>
+            <p class="sub-heading">Choose the perfect plan for your business needs. No hidden fees, no surprises.</p>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-check"></i>
+                    <span>30-Day Money Back</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check"></i>
+                    <span>Free Domain & SSL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Tabs Section -->
+<section class="plans-section">
+    <div class="wrapper">
+        <div class="tabs-wrapper">
+            <div class="money-converter">
+                <label for="currency-select" class="converter-label">View prices in:</label>
+                <select id="currency-select" class="currency-dropdown">
+                    <option value="NGN">NGN (₦)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="CAD">CAD (CA$)</option>
+                    <option value="AUD">AUD (AU$)</option>
+                </select>
+            </div>
+            <div class="tab-navigation">
+                <button class="tab-button current" data-tab="website">Website Packages</button>
+                <button class="tab-button" data-tab="app">App Packages</button>
+                <button class="tab-button" data-tab="custom">Custom Quote</button>
+                <button class="tab-button" data-tab="maintenance">Maintenance Plans</button>
+            </div>
+        </div>
+
+        <!-- Website Packages Tab -->
+        <div class="tab-panel current" id="website">
+            <div class="plans-grid">
+                <!-- Basic Website -->
+                <div class="plan-card">
+                    <div class="plan-top">
+                        <h3 class="plan-name">Basic Website</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-basic-website">₦</span>
+                            <span class="price-value" id="amount-basic-website">350,000</span>
+                            <span class="billing-period">/one-time</span>
+                        </div>
+                        <p class="plan-summary">Perfect for small businesses and startups</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>5 Custom Pages</li>
+                        <li><i class="fas fa-check"></i>Responsive Design</li>
+                        <li><i class="fas fa-check"></i>Contact Form</li>
+                        <li><i class="fas fa-check"></i>Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i>Free Domain (1 Year)</li>
+                        <li><i class="fas fa-check"></i>Free Logo</li>
+                        <li><i class="fas fa-times"></i>E-commerce Features</li>
+                        <li><i class="fas fa-times"></i>CMS Integration</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Business Website -->
+                <div class="plan-card highlighted">
+                    <div class="featured-tag">Most Popular</div>
+                    <div class="plan-top">
+                        <h3 class="plan-name">Business Website</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-business-website">₦</span>
+                            <span class="price-value" id="amount-business-website">500,000</span>
+                            <span class="billing-period">/one-time</span>
+                        </div>
+                        <p class="plan-summary">Ideal for growing businesses</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>10 Custom Pages</li>
+                        <li><i class="fas fa-check"></i>Responsive Design</li>
+                        <li><i class="fas fa-check"></i>Contact & Booking Forms</li>
+                        <li><i class="fas fa-check"></i>Advanced SEO Setup</li>
+                        <li><i class="fas fa-check"></i>Free Domain (1 Year)</li>
+                        <li><i class="fas fa-check"></i>Free Logo</li>
+                        <li><i class="fas fa-check"></i>CMS Integration</li>
+                        <li><i class="fas fa-check"></i>Basic E-commerce</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+
+                <!-- E-commerce Website -->
+                <div class="plan-card">
+                    <div class="plan-top">
+                        <h3 class="plan-name">E-commerce Website</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-ecommerce-website">₦</span>
+                            <span class="price-value" id="amount-ecommerce-website">800,000</span>
+                            <span class="billing-period">/one-time</span>
+                        </div>
+                        <p class="plan-summary">Complete online store solution</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>Unlimited Products</li>
+                        <li><i class="fas fa-check"></i>Payment Gateway Integration</li>
+                        <li><i class="fas fa-check"></i>Inventory Management</li>
+                        <li><i class="fas fa-check"></i>Order Tracking System</li>
+                        <li><i class="fas fa-check"></i>Free Domain (1 Year)</li>
+                        <li><i class="fas fa-check"></i>Free Logo</li>
+                        <li><i class="fas fa-check"></i>CMS Integration</li>
+                        <li><i class="fas fa-check"></i>Marketing Tools</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- App Packages Tab -->
+        <div class="tab-panel" id="app">
+            <div class="plans-grid">
+                <!-- Basic App -->
+                <div class="plan-card">
+                    <div class="plan-top">
+                        <h3 class="plan-name">Basic Mobile App</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-basic-app">₦</span>
+                            <span class="price-value" id="amount-basic-app">500,000</span>
+                            <span class="billing-period">/one-time</span>
+                        </div>
+                        <p class="plan-summary">Simple cross-platform mobile app</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>iOS & Android</li>
+                        <li><i class="fas fa-check"></i>React Native</li>
+                        <li><i class="fas fa-check"></i>5 Screens</li>
+                        <li><i class="fas fa-check"></i>Basic UI/UX Design</li>
+                        <li><i class="fas fa-check"></i>App Store Deployment</li>
+                        <li><i class="fas fa-check"></i>3 Months Support</li>
+                        <li><i class="fas fa-times"></i>Backend API</li>
+                        <li><i class="fas fa-times"></i>Advanced Features</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Business App -->
+                <div class="plan-card highlighted">
+                    <div class="featured-tag">Recommended</div>
+                    <div class="plan-top">
+                        <h3 class="plan-name">Business App</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-business-app">₦</span>
+                            <span class="price-value" id="amount-business-app">1,200,000</span>
+                            <span class="billing-period">/one-time</span>
+                        </div>
+                        <p class="plan-summary">Feature-rich business application</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>iOS & Android</li>
+                        <li><i class="fas fa-check"></i>React Native/Flutter</li>
+                        <li><i class="fas fa-check"></i>15+ Screens</li>
+                        <li><i class="fas fa-check"></i>Custom UI/UX Design</li>
+                        <li><i class="fas fa-check"></i>App Store Deployment</li>
+                        <li><i class="fas fa-check"></i>6 Months Support</li>
+                        <li><i class="fas fa-check"></i>Basic Backend API</li>
+                        <li><i class="fas fa-check"></i>Push Notifications</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Enterprise App -->
+                <div class="plan-card">
+                    <div class="plan-top">
+                        <h3 class="plan-name">Enterprise App</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-enterprise-app">₦</span>
+                            <span class="price-value" id="amount-enterprise-app">2,500,000</span>
+                            <span class="billing-period">/one-time</span>
+                        </div>
+                        <p class="plan-summary">Advanced custom mobile solution</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>iOS & Android</li>
+                        <li><i class="fas fa-check"></i>Native Development</li>
+                        <li><i class="fas fa-check"></i>Unlimited Screens</li>
+                        <li><i class="fas fa-check"></i>Premium UI/UX Design</li>
+                        <li><i class="fas fa-check"></i>App Store Deployment</li>
+                        <li><i class="fas fa-check"></i>1 Year Support</li>
+                        <li><i class="fas fa-check"></i>Custom Backend API</li>
+                        <li><i class="fas fa-check"></i>Advanced Features</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Custom Quote Tab -->
+        <div class="tab-panel" id="custom">
+            <div class="bespoke-section">
+                <div class="quote-content">
+                    <div class="quote-top">
+                        <h2 class="bespoke-title">Need Something Custom?</h2>
+                        <p class="bespoke-desc">Tell us about your project and we'll provide a tailored quote</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4 class="service-name">Consultation</h4>
+                            <p class="service-desc">Free initial consultation to understand your needs</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-cogs"></i>
+                            <h4 class="service-name">Custom Solution</h4>
+                            <p class="service-desc">Tailored development based on your requirements</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4 class="service-name">Scalable</h4>
+                            <p class="service-desc">Solutions designed to grow with your business</p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="estimate-form">
+                        <h3 class="form-title">Get Your Custom Quote</h3>
+                        <!-- Simplified FormSubmit configuration - removed unnecessary hidden inputs -->
+                        <form class="form-content" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="🚀 New Quote Request - Websifyapp">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            
+                            <!-- Form Fields -->
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" name="project_type" placeholder="Project Type (e.g., E-commerce Website, Mobile App)" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea name="project_description" placeholder="Project Description (Please describe your project in detail)" rows="4" required></textarea>
+                            </div>
+                            <div class="input-group">
+                                <select name="budget_range" id="budgetSelect" required>
+                                    <option value="">Select Budget Range</option>
+                                    <option value="100-500">₦100,000 - ₦500,000</option>
+                                    <option value="500-1000">₦500,000 - ₦1,000,000</option>
+                                    <option value="1000+">₦1,000,000+</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="currency" id="hiddenCurrency" value="NGN">
+                            <button type="submit" class="action-btn custom-btns">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+         
+<!-- Maintenance Plans Tab -->
+        <div class="tab-panel" id="maintenance">
+            <div class="plans-grid">
+                <!-- Basic Maintenance -->
+                <div class="plan-card">
+                    <div class="plan-top">
+                        <h3 class="plan-name">Basic Care</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-basic-maintenance">₦</span>
+                            <span class="price-value" id="amount-basic-maintenance">50,000</span>
+                            <span class="billing-period">/month</span>
+                        </div>
+                        <p class="plan-summary">Essential website maintenance</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>Weekly Backups</li>
+                        <li><i class="fas fa-check"></i>Security Monitoring</li>
+                        <li><i class="fas fa-check"></i>Uptime Monitoring</li>
+                        <li><i class="fas fa-check"></i>Basic Updates</li>
+                        <li><i class="fas fa-check"></i>Email Support</li>
+                        <li><i class="fas fa-times"></i>Content Updates</li>
+                        <li><i class="fas fa-times"></i>Performance Optimization</li>
+                        <li><i class="fas fa-times"></i>Emergency Support</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Professional Maintenance -->
+                <div class="plan-card highlighted">
+                    <div class="featured-tag">Most Popular</div>
+                    <div class="plan-top">
+                        <h3 class="plan-name">Professional Care</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-pro-maintenance">₦</span>
+                            <span class="price-value" id="amount-pro-maintenance">100,000</span>
+                            <span class="billing-period">/month</span>
+                        </div>
+                        <p class="plan-summary">Comprehensive maintenance package</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>Daily Backups</li>
+                        <li><i class="fas fa-check"></i>Advanced Security</li>
+                        <li><i class="fas fa-check"></i>Uptime Monitoring</li>
+                        <li><i class="fas fa-check"></i>All Updates</li>
+                        <li><i class="fas fa-check"></i>Priority Support</li>
+                        <li><i class="fas fa-check"></i>Content Updates (5 hrs/mo)</li>
+                        <li><i class="fas fa-check"></i>Performance Optimization</li>
+                        <li><i class="fas fa-check"></i>Emergency Support</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+
+                <!-- Enterprise Maintenance -->
+                <div class="plan-card">
+                    <div class="plan-top">
+                        <h3 class="plan-name">Enterprise Care</h3>
+                        <div class="cost-display">
+                            <span class="money-symbol" id="currency-enterprise-maintenance">₦</span>
+                            <span class="price-value" id="amount-enterprise-maintenance">200,000</span>
+                            <span class="billing-period">/month</span>
+                        </div>
+                        <p class="plan-summary">Complete managed services</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i>Real-time Backups</li>
+                        <li><i class="fas fa-check"></i>Enterprise Security</li>
+                        <li><i class="fas fa-check"></i>Uptime Monitoring</li>
+                        <li><i class="fas fa-check"></i>All Updates</li>
+                        <li><i class="fas fa-check"></i>24/7 Support</li>
+                        <li><i class="fas fa-check"></i>Unlimited Content Updates</li>
+                        <li><i class="fas fa-check"></i>Advanced Optimization</li>
+                        <li><i class="fas fa-check"></i>Dedicated Manager</li>
+                    </ul>
+                    <button class="action-btn">
+                        <a href="https://wa.me/2349044410020" target="_blank" class="whatsapp-link">
+                            Get Started
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="currency-disclaimer"> 💬 Our prices are negotiable! We design and build all types of websites and mobile apps tailored to your needs.  Click <strong>“Get Started”</strong> to message us directly on WhatsApp and discuss your project.</p>
+</section>
+
+<!-- FAQ Section -->
+<section class="questions-section">
+    <div class="wrapper">
+        <div class="section-title-block">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to common questions about our pricing and services</p>
+        </div>
+        <div class="questions-grid">
+            <div class="question-item">
+                <h4 class="question-text">What payment methods do you accept?</h4>
+                <p class="answer-text">We accept bank transfers, credit/debit cards, Gift Card, PayPal, and cryptocurrency payments for your convenience.</p>
+            </div>
+            <div class="question-item">
+                <h4 class="question-text">Do you offer refunds?</h4>
+                <p class="answer-text">Yes, we offer a 30-day money-back guarantee on all our services if you're not satisfied.</p>
+            </div>
+            <div class="question-item">
+                <h4 class="question-text">Can I upgrade my plan later?</h4>
+                <p class="answer-text">Absolutely! You can upgrade your plan at any time. We'll prorate the cost based on your current billing cycle.</p>
+            </div>
+            <div class="question-item">
+                <h4 class="question-text">How long does project delivery take?</h4>
+                <p class="answer-text">Delivery times vary by project complexity. Basic websites take 2-3 weeks, while complex applications may take 8-12 weeks.</p>
+            </div>
+            <div class="question-item">
+                <h4 class="question-text">Do you provide ongoing support?</h4>
+                <p class="answer-text">Yes, we offer various support packages to ensure your digital solution continues to perform optimally.</p>
+            </div>
+            <div class="question-item">
+                <h4 class="question-text">Can I request custom features?</h4>
+                <p class="answer-text">Definitely! We specialize in custom solutions tailored to your specific business needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+     
+<footer class="site-footer">
+    <div class="footer-content">
+        <!-- Brand Section -->
+        <div class="footer-brand">
+            <div class="brand-logo">Websifyapp</div>
+            <p class="brand-tagline">Creating exceptional digital experiences that drive business growth and success across West Africa.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61582788380567" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/GoldMk67?s=09" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/codewithmalik3?igsh=MWdkOHdyNGIwdWV6YQ==" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-section">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="index.html#About">About Us <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="index.html#Services">Services <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="portfolio.html">Portfolio <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="contact.html">Contact <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links-section">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+                <li><a href="#">Web Development <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">App Development <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">UI/UX Design <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Digital Marketing <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Branding <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="footer-contact">
+            <h3 class="footer-heading">Contact Info</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text">Lagos<br>West Africa</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text">+234 904 441 0020</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text">Websifyapp@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <p class="newsletter-text">Subscribe to our newsletter for updates</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Websifyapp. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/2349044410020" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+   <!-- EmailJS SDK -->
+<script src="script.js"></script>
+<script src="pricing.js"></script>
+<script src="form-submit-handler.js"></script>
+</body>
+</html>
