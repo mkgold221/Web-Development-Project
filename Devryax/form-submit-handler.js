@@ -161,3 +161,5 @@ class FormSubmitHandler {
 
 // Initialize FormSubmit handler when script loads
 const formSubmitHandler = new FormSubmitHandler()
+
+

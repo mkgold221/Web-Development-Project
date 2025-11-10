@@ -98,6 +98,8 @@ body[data-theme="dark"] {
     height: 60px;
     border-radius: 50%;
     transition: transform 0.3s ease;
+        border: 2px solid var(--color-primary);
+
 }
 
 .logo:hover img {
@@ -944,8 +946,11 @@ a{
 }
 
 @media (max-width: 640px) {
-    .container {
-        padding: 0 1.5rem;
+   .hero .container {
+        padding: 0 3.5rem;
+        /* border: 2px solid red; */
+        margin: auto;
+        text-align: center;
     }
     
     .hero {
@@ -958,6 +963,7 @@ a{
     }
 
     .hero-text h1 {
+
         font-size: 2rem;
         margin-bottom: 1rem;
     }
@@ -1008,6 +1014,8 @@ a{
     .hero {
         min-height: 80vh;
         padding: 1rem 0;
+        /* border: 2px solid red; */
+        margin: auto;
         text-align: center;
     }
     
@@ -1018,7 +1026,9 @@ a{
     .hero-text p {
         font-size: 0.95rem;
     }
-
+     .hero-visual{
+         display: none;
+     }
     .globe-container {
         width: 200px;
         height: 200px;

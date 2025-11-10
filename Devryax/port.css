@@ -35,8 +35,7 @@ body {
 }
 
 /* Fixed typo: .containeer -> .container */
-.containeer,
-.container {
+.containeer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
