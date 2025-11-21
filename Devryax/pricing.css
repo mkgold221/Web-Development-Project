@@ -1033,3 +1033,96 @@
         .action-btn:hover {
             background: var(--color-secondary);
         }
+
+/* Project Details Form Styles */
+#projectDetailsModal .quote-popup-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+#projectDetailsModal .form-content {
+  max-width: 100%;
+}
+
+#projectDetailsModal .input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+#projectDetailsModal .input-group input[type="file"] {
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: var(--transition);
+}
+
+#projectDetailsModal .input-group input[type="file"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 97, 255, 0.1);
+}
+
+#projectDetailsModal .input-group small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+#projectDetailsModal h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Success and Error states */
+.quote-popup-icon.success {
+  color: #10b981;
+}
+
+.quote-popup-icon.error {
+  color: #ff4757;
+}
+
+/* File upload preview (optional enhancement) */
+.file-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.file-preview-item {
+  background: var(--color-background);
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.file-preview-item i {
+  color: var(--color-primary);
+}
+
+/* Responsive adjustments for project details form */
+@media (max-width: 768px) {
+  #projectDetailsModal .quote-popup-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #projectDetailsModal .quote-popup-content {
+    padding: 1.5rem 1rem;
+  }
+}
+

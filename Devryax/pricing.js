@@ -38,7 +38,7 @@ const exchangeRates = {
   NGN: {
     symbol: "₦",
     rates: {
-      "Basic Website": 300000,
+      "Basic Website": 350000,
       "Business Website": 600000,
       "E-commerce Website": 950000,
       "Basic Mobile App": 700000,
@@ -208,12 +208,12 @@ function initPaymentHandlers() {
   // Payment configuration
   const paymentConfig = {
     stripe: {
-      publicKey: 'pk_test_your_stripe_public_key_here',
+      publicKey: '',
       successUrl: window.location.href + '?payment=success',
       cancelUrl: window.location.href + '?payment=canceled'
     },
     flutterwave: {
-      publicKey: 'FLWPUBK_TEST_your_flutterwave_public_key_here',
+      publicKey: 'FLWPUBK-aa0cde65b517cf30e045a1e55793b3a9-X',
       redirectUrl: window.location.href + '?payment=success'
     }
   };
@@ -334,8 +334,8 @@ function initPaymentHandlers() {
         },
         callback: function(response) {
           if (response.status === 'successful') {
-            alert('Payment successful! Transaction ID: ' + response.transaction_id);
-            window.location.href = paymentConfig.flutterwave.redirectUrl;
+            // Show project details form after successful payment
+            showProjectDetailsForm(currentPaymentData, response.transaction_id);
           } else {
             alert('Payment failed. Please try again.');
           }
@@ -386,3 +386,185 @@ function formatPrice(price, currency) {
   }
   return price.toLocaleString();
 }
+
+// ==================== PROJECT DETAILS FORM ====================
+
+function showProjectDetailsForm(paymentData, transactionId = '') {
+  // Create form overlay
+  const formOverlay = document.createElement('div');
+  formOverlay.className = 'quote-popup-overlay active';
+  formOverlay.id = 'projectDetailsModal';
+  
+  formOverlay.innerHTML = `
+    <div class="quote-popup-content" style="max-width: 600px;">
+      <div class="quote-popup-icon">
+        <i class="fas fa-clipboard-check"></i>
+      </div>
+      <h2 class="quote-popup-title">Project Details</h2>
+      <p class="quote-popup-message">Thank you for your payment! Please provide your project details to get started.</p>
+      
+      <form id="projectDetailsForm" class="estimate-form" method="POST">
+        <input type="hidden" name="_subject" value="🎉 Payment Completed - ${paymentData.plan} - Websifyapp">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="payment_plan" value="${paymentData.plan}">
+        <input type="hidden" name="payment_amount" value="${paymentData.amount}">
+        <input type="hidden" name="payment_currency" value="${paymentData.currency}">
+        <input type="hidden" name="transaction_id" value="${transactionId}">
+        
+        <div class="form-content">
+          <!-- Basic Contact Information -->
+          <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Contact Information</h4>
+          
+          <div class="input-group">
+            <input type="text" name="full_name" placeholder="Full Name *" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="email" name="email" placeholder="Email Address *" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="tel" name="phone" placeholder="Phone Number *" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="tel" name="whatsapp" placeholder="WhatsApp Number *" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="text" name="location" placeholder="Location (Optional)">
+          </div>
+
+          <!-- Project Type -->
+          <h4 style="color: var(--color-primary); margin: 2rem 0 1rem 0;">Project Details</h4>
+          
+          <div class="input-group">
+            <select name="project_type" required>
+              <option value="">Select Project Type *</option>
+              <option value="Website Design">Website Design</option>
+              <option value="Logo Design">Logo Design</option>
+              <option value="App Development">App Development</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Data Analysis">Data Analysis</option>
+              <option value="E-commerce Website">E-commerce Website</option>
+              <option value="Business Website">Business Website</option>
+              <option value="Mobile App">Mobile App</option>
+              <option value="Website Maintenance">Website Maintenance</option>
+              <option value="Branding Package">Branding Package</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Project Description -->
+          <div class="input-group">
+            <textarea name="project_description" placeholder="Tell us what you want for your project *" rows="5" required></textarea>
+          </div>
+
+          <!-- Deadline -->
+          <div class="input-group">
+            <input type="text" name="deadline" placeholder="When do you want the project delivered? (Optional)">
+          </div>
+
+          <!-- File Upload -->
+          <div class="input-group">
+            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">
+              Additional Files (Optional)
+            </label>
+            <input type="file" name="attachments" multiple 
+                   accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.zip,.psd,.ai,.xd,.fig"
+                   style="padding: 0.5rem; border: 2px solid var(--border-color); border-radius: var(--radius); width: 100%;">
+            <small style="color: var(--text-muted); font-size: 0.8rem;">
+              You can upload logo, images, documents, screenshots, or requirements (Max: 10MB total)
+            </small>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="action-btn" style="margin-top: 2rem;">
+            <i class="fas fa-paper-plane"></i> Submit Project Details
+          </button>
+        </div>
+      </form>
+      
+      <button class="quote-popup-btn" onclick="closeProjectDetailsForm()" style="margin-top: 1rem;">
+        <i class="fas fa-times"></i> Close
+      </button>
+    </div>
+  `;
+  
+  document.body.appendChild(formOverlay);
+  
+  // Add form submission handler
+  const form = document.getElementById('projectDetailsForm');
+  if (form) {
+    form.addEventListener('submit', handleProjectDetailsSubmit);
+  }
+}
+
+// Function to close the project details form
+function closeProjectDetailsForm() {
+  const modal = document.getElementById('projectDetailsModal');
+  if (modal) {
+    modal.remove();
+  }
+}
+
+// Function to handle form submission
+async function handleProjectDetailsSubmit(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalText = submitButton.innerHTML;
+  
+  // Show loading state
+  submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+  submitButton.disabled = true;
+  
+  try {
+    const formData = new FormData(form);
+    
+    // Send to FormSubmit with your email
+    const response = await fetch('https://formsubmit.co/ajax/idowumalik32@gmail.com', {
+      method: 'POST',
+      body: formData
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok && result.success) {
+      // Show success message
+      showFormSubmissionResult('success', 'Project details submitted successfully! We will contact you within 24 hours.');
+    } else {
+      throw new Error('Form submission failed');
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    showFormSubmissionResult('error', 'Failed to submit project details. Please try again or contact us directly.');
+  } finally {
+    submitButton.innerHTML = originalText;
+    submitButton.disabled = false;
+  }
+}
+
+// Function to show form submission result
+function showFormSubmissionResult(type, message) {
+  const modal = document.getElementById('projectDetailsModal');
+  if (modal) {
+    modal.innerHTML = `
+      <div class="quote-popup-content" style="text-align: center;">
+        <div class="quote-popup-icon ${type}">
+          <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        </div>
+        <h2 class="quote-popup-title">${type === 'success' ? 'Success!' : 'Oops!'}</h2>
+        <p class="quote-popup-message">${message}</p>
+        <button class="quote-popup-btn" onclick="closeProjectDetailsForm()">
+          <i class="fas fa-check"></i> OK
+        </button>
+      </div>
+    `;
+  }
+}
+
+// Make functions globally available
+window.closeProjectDetailsForm = closeProjectDetailsForm;

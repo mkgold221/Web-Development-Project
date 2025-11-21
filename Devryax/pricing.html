@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
     <!-- Stripe.js -->
     <script src="https://js.stripe.com/v3/"></script>
     <!-- Flutterwave -->
@@ -312,69 +313,70 @@
             </div>
 
             <!-- Custom Quote Tab -->
-            <div class="tab-panel" id="custom">
-                <div class="bespoke-section">
-                    <div class="quote-content">
-                        <div class="quote-top">
-                            <h2 class="bespoke-title">Need Something Custom?</h2>
-                            <p class="bespoke-desc">Tell us about your project and we'll provide a tailored quote</p>
-                        </div>
-                        <div class="services-grid">
-                            <div class="service-card">
-                                <i class="fas fa-lightbulb"></i>
-                                <h4 class="service-name">Consultation</h4>
-                                <p class="service-desc">Free initial consultation to understand your needs</p>
-                            </div>
-                            <div class="service-card">
-                                <i class="fas fa-cogs"></i>
-                                <h4 class="service-name">Custom Solution</h4>
-                                <p class="service-desc">Tailored development based on your requirements</p>
-                            </div>
-                            <div class="service-card">
-                                <i class="fas fa-chart-line"></i>
-                                <h4 class="service-name">Scalable</h4>
-                                <p class="service-desc">Solutions designed to grow with your business</p>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="estimate-form">
-                            <h3 class="form-title">Get Your Custom Quote</h3>
-                            <form class="form-content" method="POST">
-                                <input type="hidden" name="_subject" value="🚀 New Quote Request - Websifyapp">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_template" value="table">
-                                
-                                <div class="input-group">
-                                    <input type="text" name="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="input-group">
-                                    <input type="email" name="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" name="project_type" placeholder="Project Type (e.g., E-commerce Website, Mobile App)" required>
-                                </div>
-                                <div class="input-group">
-                                    <textarea name="project_description" placeholder="Project Description (Please describe your project in detail)" rows="4" required></textarea>
-                                </div>
-                                <div class="input-group">
-                                    <select name="budget_range" id="budgetSelect" required>
-                                        <option value="">Select Budget Range</option>
-                                        <option value="100-500">₦100,000 - ₦500,000</option>
-                                        <option value="500-1000">₦500,000 - ₦1,000,000</option>
-                                        <option value="1000+">₦1,000,000+</option>
-                                    </select>
-                                </div>
-                                <input type="hidden" name="currency" id="hiddenCurrency" value="NGN">
-                                <button type="submit" class="action-btn custom-btns">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+             <!-- In the Custom Quote Tab section -->
+<div class="tab-panel" id="custom">
+    <div class="bespoke-section">
+        <div class="quote-content">
+            <div class="quote-top">
+                <h2 class="bespoke-title">Need Something Custom?</h2>
+                <p class="bespoke-desc">Tell us about your project and we'll provide a tailored quote</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4 class="service-name">Consultation</h4>
+                    <p class="service-desc">Free initial consultation to understand your needs</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4 class="service-name">Custom Solution</h4>
+                    <p class="service-desc">Tailored development based on your requirements</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4 class="service-name">Scalable</h4>
+                    <p class="service-desc">Solutions designed to grow with your business</p>
                 </div>
             </div>
-             
+            <br>
+            <br>
+            <div class="estimate-form">
+                <h3 class="form-title">Get Your Custom Quote</h3>
+                <form class="form-content" action="https://formsubmit.co/idowumalik32@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="🚀 New Quote Request - Websifyapp">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="project_type" placeholder="Project Type (e.g., E-commerce Website, Mobile App)" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="project_description" placeholder="Project Description (Please describe your project in detail)" rows="4" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <select name="budget_range" id="budgetSelect" required>
+                            <option value="">Select Budget Range</option>
+                            <option value="100-500">₦100,000 - ₦500,000</option>
+                            <option value="500-1000">₦500,000 - ₦1,000,000</option>
+                            <option value="1000+">₦1,000,000+</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="currency" id="hiddenCurrency" value="NGN">
+                    <button type="submit" class="action-btn custom-btns">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+                   
             <!-- Maintenance Plans Tab -->
             <div class="tab-panel" id="maintenance">
                 <div class="plans-grid">
@@ -459,7 +461,8 @@
                 </div>
             </div>
         </div>
-        <p class="currency-disclaimer"> 💬 Our prices are negotiable! We design and build all types of websites and mobile apps tailored to your needs. Click <strong>"Get Started"</strong> to make a payment or <strong>"Get Started"</strong> to message us directly on WhatsApp and discuss your project.</p>
+        <!-- <p class="currency-disclaimer"> 💬 Our prices are negotiable! We design and build all types of websites and mobile apps tailored to your needs. Click <strong>"Get Started"</strong> to make a payment or <strong>"Get Started"</strong> to message us directly on WhatsApp and discuss your project.
+        </p> -->
     </section>
 
     <!-- FAQ Section -->
@@ -513,7 +516,7 @@
                     <i class="fab fa-cc-stripe"></i> Pay with Stripe
                 </button>
                 <button id="flutterwavePayment" class="payment-method-btn">
-                    <i class="fas fa-money-bill-wave"></i> Pay with Flutterwave
+                    <i class="fas fa-money-bill-wave"></i> Pay Now
                 </button>
             </div>
             
@@ -608,9 +611,54 @@
        aria-label="Chat on WhatsApp">
        <i class="fab fa-whatsapp"></i>
     </a>
+
+  <div class="ai-chat-widget">
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-robot"></i>
+    </button>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h3>Websifyapp AI Assistant</h3>
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    Hello! I'm Websifyapp's AI assistant. How can I help you today?
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <textarea class="chat-input" id="chatInput" placeholder="Type your message..." rows="1"></textarea>
+            <button class="chat-send" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
     <!-- JavaScript files -->
     <script src="script.js"></script>
     <script src="pricing.js"></script>
     <script src="form-submit-handler.js"></script>
+    <script>
+// Handle URL parameters for successful payments
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('payment') === 'success') {
+    // Show success message and option to fill project details
+    setTimeout(() => {
+      const paymentData = {
+        plan: 'Custom Project',
+        amount: 0,
+        currency: 'NGN',
+        recurring: false
+      };
+      showProjectDetailsForm(paymentData);
+    }, 1000);
+  }
+});
+</script>
 </body>
 </html>
