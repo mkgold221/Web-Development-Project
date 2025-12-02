@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone - Mobile Accessories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-shopping-bag logo-icon"></i>
+                    ShopEase
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Electronics</a>
+                        <a href="#">Fashion</a>
+                        <a href="#">Home & Garden</a>
+                        <a href="#">Sports</a>
+                        <a href="#">Beauty</a>
+                        <a href="#">Toys</a>
+                    </div>
+                </li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Authentication Buttons -->
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+   <br>
+    <div class="shop-container shop-page">
+        <!-- Search and Filters Section -->
+        <div class="shop-header">
+            <div class="search-containers">
+                <input type="text" class="search-bar" placeholder="Search for products...">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label class="filter-label">Category</label>
+                        <select class="filter-select" id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="phones">Phones</option>
+                            <option value="headphones">Headphones</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="gaming">Gaming Consoles</option>
+                            <option value="pc-builds">PC Builds</option>
+                            <option value="accessories">Accessories</option>
+                            <option value="games">Games</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Brand</label>
+                        <select class="filter-select" id="brand-filter">
+                            <option value="all">All Brands</option>
+                            <option value="apple">Apple</option>
+                            <option value="samsung">Samsung</option>
+                            <option value="sony">Sony</option>
+                            <option value="logitech">Logitech</option>
+                            <option value="razer">Razer</option>
+                            <option value="msi">MSI</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Price Range</label>
+                        <input type="range" min="0" max="2000" value="1000" class="price-slider" id="price-filter">
+                        <div class="price-values">
+                            <span>$0</span> - <span id="price-value">$1000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sort-container">
+                <label class="sort-label">Sort by:</label>
+                <select class="sort-select" id="sort-options">
+                    <option value="newest">Newest</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+
+        <!-- Product Details Modal -->
+        <div class="modal" id="product-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-product-title">Product Name</h2>
+                    <button class="close-modal" id="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-product-image" src="/placeholder.svg" alt="Product Image">
+                    </div>
+                    <div class="modal-details">
+                        <div class="product-price">
+                            <span class="current-price" id="modal-current-price">$299.99</span>
+                            <span class="original-price" id="modal-original-price">$399.99</span>
+                            <span class="discount" id="modal-discount">25% OFF</span>
+                        </div>
+                        <!-- Fixed inline onclick handler -->
+                        <button class="add-to-cart" id="modal-add-to-cart">
+                               <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        
+                        <h3 style="margin-top: 30px;">Specifications</h3>
+                        <table class="specs-table" id="specs-table">
+                            <!-- Specifications will be dynamically inserted here -->
+                        </table>
+                        
+                        <div class="reviews-section">
+                            <h3>Customer Reviews</h3>
+                            <div id="reviews-container">
+                                <!-- Reviews will be dynamically inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div class="related-products">
+                            <h3 class="section-title">Related Products</h3>
+                            <div class="related-grid" id="related-products">
+                                <!-- Related products will be dynamically inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <h3>TechHub</h3>
+                <p>Your trusted partner for premium electronics. We bring you the latest technology with unmatched quality and service.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Categories</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Deals</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories Column -->
+            <div class="footer-column">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Smartphones</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Laptops</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Gaming</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Audio</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Accessories</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Smart Home</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Tech Street, Digital City, DC 12345</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@techhub.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Fri: 9AM - 6PM<br>Sat: 10AM - 4PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 TechHub. All rights reserved.
+            </div>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shop.js"></script>
+    <!-- Fixed add to cart functionality with event listener -->
+    <script>
+        // Setup modal add to cart button after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const modalAddToCart = document.getElementById('modal-add-to-cart');
+            if (modalAddToCart) {
+                modalAddToCart.addEventListener('click', function() {
+                    // Get the current product ID from the modal title
+                    const productTitle = document.getElementById('modal-product-title').textContent;
+                    const product = products.find(p => p.title === productTitle);
+                    if (product) {
+                        addToCart(product);
+                    }
+                });
+            }
+
+            // Setup add to cart for product cards
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.add-to-cart')) {
+                    const productId = e.target.closest('.add-to-cart').dataset.id;
+                    const product = products.find(p => p.id === parseInt(productId));
+                    if (product) {
+                        addToCart(product);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

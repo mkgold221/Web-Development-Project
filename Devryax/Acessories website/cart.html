@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - TechZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header id="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-shopping-bag logo-icon"></i>
+                    ShopEase
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Electronics</a>
+                        <a href="#">Fashion</a>
+                        <a href="#">Home & Garden</a>
+                        <a href="#">Sports</a>
+                        <a href="#">Beauty</a>
+                        <a href="#">Toys</a>
+                    </div>
+                </li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Authentication Buttons -->
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <div class="cart-container">
+        <h1 class="page-title">Your Shopping Cart</h1>
+        
+        <div class="cart-content">
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            
+            <div class="cart-summary">
+                <h2 class="summary-title">Order Summary</h2>
+                
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-value" id="subtotal">$0.00</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span class="summary-label">Shipping</span>
+                    <span class="summary-value" id="shipping">$0.00</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span class="summary-label">Tax</span>
+                    <span class="summary-value" id="tax">$0.00</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span class="summary-label">Discount</span>
+                    <span class="summary-value" id="discount">-$0.00</span>
+                </div>
+                
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+                
+                <button class="checkout-btn">
+                    <i class="fas fa-lock"></i> Proceed to Checkout
+                </button>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa payment-icon"></i>
+                    <i class="fab fa-cc-mastercard payment-icon"></i>
+                    <i class="fab fa-cc-amex payment-icon"></i>
+                    <i class="fab fa-cc-paypal payment-icon"></i>
+                    <i class="fab fa-apple-pay payment-icon"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="saved-for-later" id="saved-section">
+            <h2 class="saved-title">Saved For Later</h2>
+            <div class="saved-items" id="saved-items">
+                <!-- Saved items will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cart data - in a real app, this would come from localStorage or an API
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
+
+        // Sample product data for saved items
+        const sampleSavedItems = [
+            {
+                id: 101,
+                title: "Wireless Charging Pad",
+                price: 29.99,
+                image: "https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                id: 102,
+                title: "Phone Case - Protective",
+                price: 19.99,
+                image: "https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            }
+        ];
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // If no items in cart, show empty state
+            if (cartItems.length === 0) {
+                showEmptyCart();
+            } else {
+                renderCartItems();
+                updateCartSummary();
+            }
+            
+            // If no saved items, use sample data for demonstration
+            if (savedItems.length === 0) {
+                savedItems = sampleSavedItems;
+                localStorage.setItem('savedItems', JSON.stringify(savedItems));
+            }
+            
+            renderSavedItems();
+        });
+
+        // Show empty cart state
+        function showEmptyCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = `
+                <div class="empty-cart">
+                    <div class="empty-cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h2 class="empty-cart-title">Your cart is empty</h2>
+                    <p class="empty-cart-text">Looks like you haven't added any items to your cart yet.</p>
+                    <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                </div>
+            `;
+            
+            // Hide the summary when cart is empty
+            document.querySelector('.cart-summary').style.display = 'none';
+        }
+
+        // Render cart items
+        function renderCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            
+            // Show the summary when cart has items
+            document.querySelector('.cart-summary').style.display = 'block';
+            
+            cartItemsContainer.innerHTML = '';
+            
+            cartItems.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="item-image">
+                    <div class="item-details">
+                        <h3 class="item-title">${item.title}</h3>
+                        <p class="item-specs">${item.specs || 'Premium quality product'}</p>
+                        <div class="item-price">$${item.price.toFixed(2)}</div>
+                        <div class="item-actions">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                                <input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, parseInt(this.value))">
+                                <button class="quantity-btn" onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                            </div>
+                            <button class="remove-btn" onclick="removeFromCart(${item.id})">
+                                <i class="fas fa-trash"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+
+        // Render saved items
+        function renderSavedItems() {
+            const savedItemsContainer = document.getElementById('saved-items');
+            
+            if (savedItems.length === 0) {
+                document.getElementById('saved-section').style.display = 'none';
+                return;
+            }
+            
+            savedItemsContainer.innerHTML = '';
+            
+            savedItems.forEach(item => {
+                const savedItem = document.createElement('div');
+                savedItem.className = 'saved-item';
+                savedItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="saved-image">
+                    <div class="saved-details">
+                        <h4 class="saved-item-title">${item.title}</h4>
+                        <div class="saved-item-price">$${item.price.toFixed(2)}</div>
+                        <button class="move-to-cart" onclick="moveToCart(${item.id})">Move to Cart</button>
+                    </div>
+                `;
+                
+                savedItemsContainer.appendChild(savedItem);
+            });
+        }
+
+        // Update item quantity
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) newQuantity = 1;
+            
+            const itemIndex = cartItems.findIndex(item => item.id === productId);
+            if (itemIndex !== -1) {
+                cartItems[itemIndex].quantity = newQuantity;
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                renderCartItems();
+                updateCartSummary();
+            }
+        }
+
+        // Remove item from cart
+        function removeFromCart(productId) {
+            cartItems = cartItems.filter(item => item.id !== productId);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            if (cartItems.length === 0) {
+                showEmptyCart();
+            } else {
+                renderCartItems();
+                updateCartSummary();
+            }
+        }
+
+        // Move item from saved to cart
+        function moveToCart(productId) {
+            const itemIndex = savedItems.findIndex(item => item.id === productId);
+            if (itemIndex !== -1) {
+                const item = savedItems[itemIndex];
+                item.quantity = 1;
+                
+                // Add to cart
+                cartItems.push(item);
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                
+                // Remove from saved
+                savedItems.splice(itemIndex, 1);
+                localStorage.setItem('savedItems', JSON.stringify(savedItems));
+                
+                // Update UI
+                renderCartItems();
+                renderSavedItems();
+                updateCartSummary();
+            }
+        }
+
+        // Update cart summary
+        function updateCartSummary() {
+            const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = subtotal > 0 ? (subtotal > 50 ? 0 : 5.99) : 0;
+            const tax = subtotal * 0.08; // 8% tax
+            const discount = subtotal > 100 ? subtotal * 0.1 : 0; // 10% discount for orders over $100
+            const total = subtotal + shipping + tax - discount;
+            
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('shipping').textContent = shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('discount').textContent = `-$${discount.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Function to add item to cart (to be called from product page)
+        function addToCart(product) {
+            // Check if product already in cart
+            const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
+            
+            if (existingItemIndex !== -1) {
+                // Increase quantity if already in cart
+                cartItems[existingItemIndex].quantity += 1;
+            } else {
+                // Add new item to cart
+                product.quantity = 1;
+                cartItems.push(product);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            // Show confirmation (in a real app, this might be a toast notification)
+            alert(`${product.title} added to cart!`);
+        }
+    </script>
+</body>
+</html>

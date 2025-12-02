@@ -33,23 +33,23 @@ function initPricingTabs() {
   })
 }
 
-// 2️⃣ Currency Converter
+// Updated pricing.js with new exchangeRates
 const exchangeRates = {
   NGN: {
     symbol: "₦",
     rates: {
-      "Basic Website": 350000,
-      "Business Website": 600000,
-      "E-commerce Website": 950000,
-      "Basic Mobile App": 700000,
-      "Business App": 1500000,
-      "Enterprise App": 3000000,
-      "Basic Maintenance": 50000,
-      "Professional Maintenance": 120000,
-      "Enterprise Maintenance": 250000,
+      "Basic Website": 250000, // was 350000
+      "Business Website": 450000, // was 600000
+      "E-commerce Website": 700000, // was 950000
+      "Basic Mobile App": 500000, // was 700000
+      "Business App": 1100000, // was 1500000
+      "Enterprise App": 2200000, // was 3000000
+      "Basic Maintenance": 35000, // was 50000
+      "Professional Maintenance": 85000, // was 120000
+      "Enterprise Maintenance": 180000, // was 250000
     },
-    budgetOptions: ["₦100,000 - ₦600,000", "₦600,000 - ₦1,200,000", "₦1,200,000+"],
-    budgetValues: ["100-600", "600-1200", "1200+"],
+    budgetOptions: ["₦100,000 - ₦400,000", "₦400,000 - ₦900,000", "₦900,000+"],
+    budgetValues: ["100-400", "400-900", "900+"],
   },
   USD: {
     symbol: "$",
@@ -76,8 +76,8 @@ const exchangeRates = {
       "Basic Mobile App": 1399,
       "Business App": 2999,
       "Enterprise App": 6199,
-      "Basic Maintenance": 199,
-      "Professional Maintenance": 299,
+      "Basic Maintenance": 129, // was 199
+      "Professional Maintenance": 259, // was 299
       "Enterprise Maintenance": 499,
     },
     budgetOptions: ["€250 - €1,100", "€1,100 - €2,200", "€2,200+"],
@@ -92,8 +92,8 @@ const exchangeRates = {
       "Basic Mobile App": 1199,
       "Business App": 2699,
       "Enterprise App": 5499,
-      "Basic Maintenance": 199,
-      "Professional Maintenance": 299,
+      "Basic Maintenance": 129, // was 199
+      "Professional Maintenance": 259, // was 299
       "Enterprise Maintenance": 499,
     },
     budgetOptions: ["£200 - £950", "£950 - £1,900", "£1,900+"],
@@ -118,18 +118,18 @@ const exchangeRates = {
   AUD: {
     symbol: "AU$",
     rates: {
-      "Basic Website": 1699,
-      "Business Website": 2499,
-      "E-commerce Website": 3499,
-      "Basic Mobile App": 2100,
-      "Business App": 4299,
-      "Enterprise App": 8699,
-      "Basic Maintenance": 169,
-      "Professional Maintenance": 329,
-      "Enterprise Maintenance": 699,
+      "Basic Website": 999, // was 1699
+      "Business Website": 1799, // was 2499
+      "E-commerce Website": 2699, // was 3499
+      "Basic Mobile App": 1599, // was 2100
+      "Business App": 3499, // was 4299
+      "Enterprise App": 6999, // was 8699
+      "Basic Maintenance": 149, // was 169
+      "Professional Maintenance": 299, // was 329
+      "Enterprise Maintenance": 599, // was 699
     },
-    budgetOptions: ["AU$300 - AU$1,600", "AU$1,600 - AU$3,200", "AU$3,200+"],
-    budgetValues: ["300-1600", "1600-3200", "3200+"],
+    budgetOptions: ["AU$300 - AU$1,200", "AU$1,200 - AU$2,500", "AU$2,500+"],
+    budgetValues: ["300-1200", "1200-2500", "2500+"],
   },
 };
 
@@ -208,7 +208,7 @@ function initPaymentHandlers() {
   // Payment configuration
   const paymentConfig = {
     stripe: {
-      publicKey: '',
+      publicKey: 'pk_test_51SX4DB00XAmaiNSUXhatOtDosKBmyV37KEYSRE22M0zYehu93j8CgeD1Z5eo2MMADCqxR2fZBTsQcVCEALaXshGR003iNKlXv8',
       successUrl: window.location.href + '?payment=success',
       cancelUrl: window.location.href + '?payment=canceled'
     },
@@ -220,7 +220,7 @@ function initPaymentHandlers() {
 
   // Initialize Stripe if public key is set
   let stripe = null;
-  if (paymentConfig.stripe.publicKey && paymentConfig.stripe.publicKey !== 'pk_test_your_stripe_public_key_here') {
+  if (paymentConfig.stripe.publicKey && paymentConfig.stripe.publicKey !== 'pk_test_51SX4DB00XAmaiNSUXhatOtDosKBmyV37KEYSRE22M0zYehu93j8CgeD1Z5eo2MMADCqxR2fZBTsQcVCEALaXshGR003iNKlXv8') {
     stripe = Stripe(paymentConfig.stripe.publicKey);
   }
 
