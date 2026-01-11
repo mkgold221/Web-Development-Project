@@ -1,0 +1,9 @@
+import React from "react";
+import { Text } from "react-native";
+import styles from "./style";
+
+const Title = ({ title }) => {
+  return <Text style={styles.title}>{title}</Text>;
+};
+
+export default Title;
